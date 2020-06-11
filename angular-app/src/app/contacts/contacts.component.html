@@ -1,0 +1,56 @@
+<!--<div class="panel panel-primary">-->
+<!--  <div class="panel-heading">-->
+<!--    <h2>Lista kontaktów</h2>-->
+    <div><button mat-button-toggle-group class="add new contact" routerLink="/dodaj_kontakt">Dodaj</button></div>
+<!--  </div>-->
+<!--  <div class="panel-body">-->
+<!--    <table class="table table-striped">-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th>Nazwa kontaktu</th>-->
+<!--        <th>Rodzaj kontaktu</th>-->
+<!--        <th>Email</th>-->
+<!--        <th>Telefon</th>-->
+<!--        <th>Akcje</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+
+<!--      <tr *ngFor="let employee of employees | async">-->
+<!--        <td>{{employee.firstName}}</td>-->
+<!--        <td>{{employee.lastName}}</td>-->
+<!--        <td>{{employee.emailId}}</td>-->
+<!--        <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>-->
+<!--          <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>-->
+<!--          <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>-->
+<!--        </td>-->
+<!--      </tr>-->
+
+
+<!--      </tbody>-->
+<!--    </table>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<table mat-table [dataSource]="contacts">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nazwa kontaktu </th>
+    <td mat-cell *matCellDef="let contact"> {{getContactName(contact)}} </td>
+  </ng-container>
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef> Typ </th>
+    <td mat-cell *matCellDef="let contact"> {{getContactType(contact)}} </td>
+  </ng-container>
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let contact"> {{getEmail(contact)}} </td>
+  </ng-container>
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef> Telefon </th>
+    <td mat-cell *matCellDef="let contact"> {{getPhoneNumber(contact)}} </td>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</table>

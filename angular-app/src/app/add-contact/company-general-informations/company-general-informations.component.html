@@ -1,0 +1,60 @@
+<hr>
+<div [hidden]="submitted" style="width: 400px;">
+
+<!--    Name-->
+    <div class="form-group">
+      <label for="name">Nazwa firmy</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="company.name" name="name">
+    </div>
+
+<!--NIP-->
+    <div class="form-group">
+      <label for="nip">NIP</label>
+      <input type="text" class="form-control" id="nip" required [(ngModel)]="company.nip" name="nip">
+    </div>
+
+<!--    Regon-->
+    <div class="form-group">
+      <label for="regon">Regon</label>
+      <input type="text" class="form-control" id="regon" required [(ngModel)]="company.regon" name="regon">
+    </div>
+
+<!--    KRS-->
+    <div class="form-group">
+      <label for="krs">KRS</label>
+      <input type="text" class="form-control" id="krs" required [(ngModel)]="company.krs" name="krs" >
+    </div>
+
+<!--Legal form-->
+<!--    <mat-form-field>-->
+<!--      <mat-label>Forma prawna</mat-label>-->
+<!--      <mat-select [formControl]="wayControl" required>-->
+<!--        <mat-option>&#45;&#45;</mat-option>-->
+<!--        <mat-option *ngFor="let way of ways" [value]="way.value">-->
+<!--          {{way.viewValue}}-->
+<!--        </mat-option>-->
+<!--      </mat-select>-->
+<!--      <mat-error *ngIf="wayControl.hasError('required')">wybierz</mat-error>-->
+<!--      <mat-hint>{{wayControl.value?.viewValue}}</mat-hint>-->
+<!--    </mat-form-field>-->
+
+<!--Telefon-->
+    <div class="form-group">
+      <label for="phoneNumber">Telefon</label>
+      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="company.phoneNumber" name="phoneNumber" >
+    </div>
+
+<!--    Email-->
+    <div class="example-container">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </div>
+
+<!--    Additional information-->
+    <div class="form-group">
+      <label for="additionalInformation">Informacje dodatkowe</label>
+      <textarea class="form-control" id="additionalInformation" required [(ngModel)]="company.additionalInformation" name="additionalInformation"></textarea>
+    </div>
+
+</div>

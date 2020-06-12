@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 import {Contact, ContactService} from '../contacts/services/contact.service';
+import {PersonGeneralInformationsComponent} from './person-general-informations/person-general-informations.component';
+import {MethodOfAcquisitionComponent} from './method-of-acquisition/method-of-acquisition.component';
+import {AddressComponent} from './address/address.component';
+import {CompanyGeneralInformationsComponent} from './company-general-informations/company-general-informations.component';
 export interface Way {
   value: string;
   viewValue: string;
@@ -18,11 +22,23 @@ export interface Way {
 })
 export class AddContactComponent implements OnInit {
 
-  constructor(private contactService: ContactService, private router: Router) { }
+  // @ts-ignore
+  @ViewChild('company')
+  company: CompanyGeneralInformationsComponent;
+  // @ts-ignore
+  @ViewChild('person')
+  person: PersonGeneralInformationsComponent;
+
+  // tslint:disable-next-line:max-line-length
+  constructor(private contactService: ContactService, private router: Router){
+  }
 
   contact: Contact = new Contact();
   submitted = false;
-  isShow = 'A';
+  isShow = 'PERSON';
+  address: AddressComponent;
+
+  recomendate: MethodOfAcquisitionComponent;
 
 
   wayControl = new FormControl('', [Validators.required]);
@@ -61,6 +77,12 @@ export class AddContactComponent implements OnInit {
   }
 
   save() {
+  //  this.contact.addresses.push( this.address.address);
+    if (this.isShow === 'PERSON') {
+      this.contact.person = this.person.person;
+    } else if (this.isShow === 'COMPANY') {
+      this.contact.company = this.company.company;
+    }
     this.contactService.addContact(this.contact)
       .subscribe(data => console.log(data), error => console.log(error));
     this.contact = new Contact();
@@ -70,7 +92,6 @@ export class AddContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.save();
   }
 
   gotoList() {

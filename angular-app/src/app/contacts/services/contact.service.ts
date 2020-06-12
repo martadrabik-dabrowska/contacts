@@ -29,7 +29,7 @@ export class ContactService {
   }
 
   addContact(contact: Contact): Observable<Contact> {
-    return this.httpClient.post<Contact>(this.api, contact);
+    return this.httpClient.post<Contact>(this.api + '/contacts/', contact);
   }
 
   // @ts-ignore

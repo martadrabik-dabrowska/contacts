@@ -38,23 +38,5 @@
 <!--      <mat-hint>{{wayControl.value?.viewValue}}</mat-hint>-->
 <!--    </mat-form-field>-->
 
-<!--Telefon-->
-    <div class="form-group">
-      <label for="phoneNumber">Telefon</label>
-      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="company.phoneNumber" name="phoneNumber" >
-    </div>
-
-<!--    Email-->
-    <div class="example-container">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </div>
-
-<!--    Additional information-->
-    <div class="form-group">
-      <label for="additionalInformation">Informacje dodatkowe</label>
-      <textarea class="form-control" id="additionalInformation" required [(ngModel)]="company.additionalInformation" name="additionalInformation"></textarea>
-    </div>
 
 </div>

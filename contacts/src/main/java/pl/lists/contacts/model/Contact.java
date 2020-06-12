@@ -24,13 +24,13 @@ public class Contact {
     @Column(name = "additionalInfo")
     private String additionalInfo;
 
-    @OneToOne(fetch = FetchType.EAGER, mappedBy ="contact")
+    @OneToOne(fetch = FetchType.EAGER, mappedBy ="contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private Company company;
 
-    @OneToOne(fetch = FetchType.EAGER, mappedBy = "contact")
+    @OneToOne(fetch = FetchType.EAGER, mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private Person person;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "contact")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses;
 
     public int getId() {

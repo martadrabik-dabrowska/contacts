@@ -11,9 +11,9 @@ import java.util.List;
 @Transactional
 public interface ContactRepository extends  JpaRepository<Contact, Integer> {
 
-    @Override
-    default List<Contact> findAll(){
-        FakeData fakeData = new FakeData();
-        return fakeData.createFakeContacts();
-    }
+//    @Override
+//    default List<Contact> findAll(){
+//        FakeData fakeData = new FakeData();
+//        return fakeData.createFakeContacts();
+//    }
 }

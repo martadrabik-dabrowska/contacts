@@ -24,7 +24,7 @@ public class Person {
     @Column(name = "pesel")
     private long pesel;
 
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "contract")
     @JsonIgnore
     private Contact contact;

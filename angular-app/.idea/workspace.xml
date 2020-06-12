@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d66f75e-4425-40ab-ab63-5b7d3042d5e1" name="Default Changelist" comment="" />
+    <list default="true" id="1d66f75e-4425-40ab-ab63-5b7d3042d5e1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/address/address.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/address/address.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/address/address.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/address/address.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/company-general-informations/company-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/company-general-informations/company-general-informations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/company-general-informations/company-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/company-general-informations/company-general-informations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/method-of-acquisition/method-of-acquisition.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/method-of-acquisition/method-of-acquisition.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/services/contact.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/services/contact.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/repository/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/repository/ContactRepository.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1d8qnwo3XM4eoy13U72wpEQdWsj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -17,13 +36,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/listaKontaktow" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/package.json" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="ts.external.directory.path" value="D:\projekt\kontakty\angular-app\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
@@ -38,15 +62,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="npm serve" type="js.build_tools.npm" nameIsGenerated="true">
+  <component name="RunManager" selected="JavaScript Debug.localhost:4200">
+    <configuration default="true" type="JavascriptDebugType" uri="http://localhost:4200/">
+      <method v="2" />
+    </configuration>
+    <configuration name="localhost:4200" type="JavascriptDebugType" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost:4200/" useFirstLineBreakpoints="true">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="npm" />
-      <arguments value="serve" />
+      <command value="start" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.localhost:4200" />
+      <item itemvalue="npm.start" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,6 +100,7 @@
       <updated>1591817238618</updated>
       <workItem from="1591817239952" duration="4191000" />
       <workItem from="1591823534016" duration="2357000" />
+      <workItem from="1591901537286" duration="13529000" />
     </task>
     <servers />
   </component>
@@ -71,24 +112,84 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
+        <line-breakpoint type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app.module.ts</url>
           <line>19</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>63</line>
+          <line>85</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>88</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>86</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>80</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>81</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>83</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
+          <line>35</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/company-general-informations/company-general-informations.component.ts</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.ts</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/add-contact/person-general-informations/person-general-informations.component.ts</url>
+          <line>28</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

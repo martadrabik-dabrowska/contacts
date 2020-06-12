@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, Input, OnInit} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {Company} from '../../contacts/services/contact.service';
@@ -8,8 +8,12 @@ import {CompanyService} from '../../contacts/services/company.service';
   templateUrl: './company-general-informations.component.html',
   styleUrls: ['./company-general-informations.component.css']
 })
+
+@Injectable({
+  providedIn: 'root'
+})
 export class CompanyGeneralInformationsComponent implements OnInit {
-  company: Company = new Company();
+   company: Company = new Company();
   submitted = false;
 
   email = new FormControl('', [Validators.required, Validators.email]);

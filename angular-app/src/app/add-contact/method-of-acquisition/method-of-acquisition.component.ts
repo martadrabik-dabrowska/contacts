@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
 
@@ -10,6 +10,10 @@ export interface Way {
   selector: 'app-method-of-acquisition',
   templateUrl: './method-of-acquisition.component.html',
   styleUrls: ['./method-of-acquisition.component.css']
+})
+
+@Injectable({
+  providedIn: 'root'
 })
 export class MethodOfAcquisitionComponent implements OnInit {
 

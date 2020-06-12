@@ -5,15 +5,34 @@
 <form (ngSubmit)="onSubmit()">
 <mat-radio-group aria-label="Select an option">
 
-  <mat-radio-button value="person" checked (click)="isShow='A'">Osoba fizyczna</mat-radio-button>
-  <mat-radio-button value="company" (click)="isShow='B'">Firma</mat-radio-button>
+  <mat-radio-button value="person" checked (click)="isShow='PERSON'">Osoba fizyczna</mat-radio-button>
+  <mat-radio-button value="company" (click)="isShow='COMPANY'">Firma</mat-radio-button>
 </mat-radio-group>
 
 
 <div class="container">
-  <app-person-general-informations *ngIf="isShow == 'A'"></app-person-general-informations>
-  <app-company-general-informations *ngIf="isShow == 'B'"></app-company-general-informations>
-  <app-address></app-address>
+  <app-person-general-informations #person *ngIf="isShow == 'PERSON'" ></app-person-general-informations>
+  <app-company-general-informations #company *ngIf="isShow == 'COMPANY'" [formControl]="submitted"></app-company-general-informations>
+  <!--Telefon-->
+  <div class="form-group">
+    <label for="phoneNumber">Telefon</label>
+    <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="contact.phoneNumber" name="phoneNumber" >
+  </div>
+
+  <!--    Email-->
+  <div class="example-container">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" [(ngModel)]="contact.email">
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </div>
+
+  <!--    Additional information-->
+  <div class="form-group">
+    <label for="additionalInformation">Informacje dodatkowe</label>
+    <textarea class="form-control" id="additionalInformation" required [(ngModel)]="contact.additionalInfo" name="additionalInformation"></textarea>
+  </div>
+
+  <app-address [formControl]="submitted"></app-address>
   <app-method-of-acquisition></app-method-of-acquisition>
   <router-outlet></router-outlet>
 </div>

@@ -34,7 +34,7 @@ public class Address {
     @Column(name = "name")
     private String name;
 
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "contract")
     @JsonIgnore
     private Contact contact;

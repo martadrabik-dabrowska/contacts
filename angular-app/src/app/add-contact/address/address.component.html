@@ -5,13 +5,6 @@
 
 <div [hidden]="submitted" style="width: 400px;">
 
-
-
-    <div class="form-group" hidden>
-      <label for="name"></label>
-      <input type="text" class="form-control" id="id" required [(ngModel)]="address.addressId" name="id">
-    </div>
-
 <div class="form-group">
   <label for="name">Nazwa typu adresu</label>
   <input type="text" class="form-control" id="name" required [(ngModel)]="address.name" name="name">
@@ -29,7 +22,7 @@
 
 <div class="form-group">
   <label for="apartmentNumber">Nr mieszkania</label>
-  <input type="text" class="form-control" id="apartmentNumber" [(ngModel)]="address.apartmentNumber" name="apartmentNumber">
+  <input type="text" class="form-control" id="apartmentNumber" [(ngModel)]="address.flatNumber" name="apartmentNumber">
 
 </div>
 
@@ -48,4 +41,3 @@
 <button mat-button class="delete">Usuń</button>
 
 </div>
-<!--<div *ngIf="addNewAddress == 'A'"><app-address></app-address></div>-->

@@ -34,12 +34,12 @@ contacts: Contact[];
     }
   }
 
-  // getEmail(contact: RootObject) {
-  //   return contact.email;
-  // }
 
-  // getPhoneNumber(contact: RootObject) {
-  //   return contact.phoneNumber;
-  // }
+  getEmail(contact: Contact) {
+    return contact.email;
+  }
 
+  getPhoneNumber(contact: Contact) {
+    return contact.phoneNumber;
+  }
 }

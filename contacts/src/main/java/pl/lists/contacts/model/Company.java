@@ -33,7 +33,7 @@ public class Company {
     @Column(name = "legalFormOther")
     private String legalFormOther;
 
-    @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "contract")
     @JsonIgnore
     private Contact contact;

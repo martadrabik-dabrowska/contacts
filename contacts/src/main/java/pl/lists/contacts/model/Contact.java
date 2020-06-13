@@ -1,6 +1,7 @@
 package pl.lists.contacts.model;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
+import org.apache.commons.collections4.CollectionUtils;
 
 import javax.persistence.*;
 import java.util.List;
@@ -23,6 +24,12 @@ public class Contact {
 
     @Column(name = "additionalInfo")
     private String additionalInfo;
+
+    @Column(name = "wayOfObtaining")
+    private WayOfObtaining wayOfObtaining;
+
+    @Column(name = "wayOfObtainingOther")
+    private String wayOfObtainingOther;
 
     @OneToOne(fetch = FetchType.EAGER, mappedBy ="contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private Company company;
@@ -87,5 +94,33 @@ public class Contact {
 
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    public WayOfObtaining getWayOfObtaining() {
+        return wayOfObtaining;
+    }
+
+    public void setWayOfObtaining(WayOfObtaining wayOfObtaining) {
+        this.wayOfObtaining = wayOfObtaining;
+    }
+
+    public String getWayOfObtainingOther() {
+        return wayOfObtainingOther;
+    }
+
+    public void setWayOfObtainingOther(String wayOfObtainingOther) {
+        this.wayOfObtainingOther = wayOfObtainingOther;
+    }
+
+    public void updateContact() {
+        if(person!=null){
+            person.setContact(this);
+        }
+        if(company!=null){
+            company.setContact(this);
+        }
+        if(CollectionUtils.isNotEmpty(addresses)){
+            addresses.stream().forEach(address->address.setContact(this));
+        }
     }
 }

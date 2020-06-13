@@ -25,6 +25,7 @@ public class FakeData {
         contact.setPhoneNumber(randomString());
         contact.setAddresses(generateAddresses(contact));
         contact.setCompany(generateCompany(contact));
+        contact.setWayOfObtaining(WayOfObtaining.RECOMENDATION);
         return contact;
     }
 

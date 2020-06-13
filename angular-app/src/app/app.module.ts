@@ -17,13 +17,15 @@ import {MatButtonModule, MatCommonModule, MatFormFieldModule, MatSelectModule, M
 // @ts-ignore
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 
-import { AddressComponent } from './add-contact/address/address.component';
-import { CompanyGeneralInformationsComponent } from './add-contact/company-general-informations/company-general-informations.component';
-import { PersonGeneralInformationsComponent } from './add-contact/person-general-informations/person-general-informations.component';
-import { MethodOfAcquisitionComponent } from './add-contact/method-of-acquisition/method-of-acquisition.component';
+import { AddressComponent } from './contact-parts/address/address.component';
+import { CompanyGeneralInformationsComponent } from './contact-parts/company-general-informations/company-general-informations.component';
+import { PersonGeneralInformationsComponent } from './contact-parts/person-general-informations/person-general-informations.component';
+import { MethodOfAcquisitionComponent } from './contact-parts/method-of-acquisition/method-of-acquisition.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AddContactComponent} from './add-contact/add-contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { EditCompanyComponent } from './edit-company/edit-company.component';
+import { EditPersonComponent } from './edit-person/edit-person.component';
 
 
 
@@ -49,6 +51,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CompanyGeneralInformationsComponent,
     PersonGeneralInformationsComponent,
     MethodOfAcquisitionComponent,
+    EditCompanyComponent,
+    EditPersonComponent,
   ],
   imports: [
     BrowserModule,

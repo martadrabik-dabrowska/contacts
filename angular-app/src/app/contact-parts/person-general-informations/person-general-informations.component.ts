@@ -16,8 +16,8 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class PersonGeneralInformationsComponent {
-
-  person: Person = new Person();
+  @Input()
+  public person: Person = new Person();
   contact: Contact = new Contact();
   submitted = false;
 

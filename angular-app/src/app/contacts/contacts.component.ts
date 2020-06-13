@@ -8,7 +8,7 @@ import {Contact, ContactService} from './services/contact.service';
 })
 export class ContactsComponent implements OnInit {
 contacts: Contact[];
-  public displayedColumns = ['name','type', 'email', 'phone']
+  public displayedColumns = ['name','type', 'email', 'phone' ,'edit']
 
   constructor(private contactRestApi: ContactService){}
 
@@ -41,5 +41,13 @@ contacts: Contact[];
 
   getPhoneNumber(contact: Contact) {
     return contact.phoneNumber;
+  }
+
+  getRouteLink(contact: Contact) {
+    if (null != contact.company){
+      return '/edytuj_firme';
+    } else if (null != contact.person){
+      return  '/edytuj_osobe';
+    }
   }
 }

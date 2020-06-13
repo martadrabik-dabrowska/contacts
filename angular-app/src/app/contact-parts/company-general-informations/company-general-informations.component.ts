@@ -12,15 +12,15 @@ import {CompanyService} from '../../contacts/services/company.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyGeneralInformationsComponent implements OnInit {
-   company: Company = new Company();
+export class CompanyGeneralInformationsComponent{
+  @Input()
+  public companyy: Company = new Company();
   submitted = false;
 
   email = new FormControl('', [Validators.required, Validators.email]);
   constructor(private companyService: CompanyService, private router: Router) { }
 
-  ngOnInit() {
-  }
+
   getErrorMessage() {
     if (this.email.hasError('required')) {
       return 'Podaj email';
@@ -30,13 +30,13 @@ export class CompanyGeneralInformationsComponent implements OnInit {
   }
   newECompany(): void {
     this.submitted = false;
-    this.company = new Company();
+    this.companyy = new Company();
   }
 
   save() {
-    this.companyService.addCompany(this.company)
+    this.companyService.addCompany(this.companyy)
       .subscribe(data => console.log(data), error => console.log(error));
-    this.company = new Company();
+    this.companyy = new Company();
     this.gotoList();
 
   }

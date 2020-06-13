@@ -8,7 +8,9 @@ public enum WayOfObtaining {
 
     SOCIAL_MEDIA(3,"Media społecznościowe"),
 
-    WWWW(4, "Strona WWWW");
+    WWWW(4, "Strona WWWW"),
+
+    OTHER(5, "Inne");
 
 
     private int id;

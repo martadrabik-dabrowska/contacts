@@ -1,4 +1,4 @@
-import {Component, Injectable, OnInit} from '@angular/core';
+import {Component, Injectable, Input, OnDestroy, OnInit} from '@angular/core';
 
 import {Router} from '@angular/router';
 import {AddressService} from '../../contacts/services/address.service';
@@ -12,28 +12,24 @@ import {Address} from '../../contacts/services/contact.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AddressComponent implements OnInit {
-  address: Address = new Address();
-  submitted = false;
-  // addNewAddress = 'A';
+export class AddressComponent implements OnInit, OnDestroy  {
+  @Input()
+  public addresses: Address[] = [];
   constructor(private addressService: AddressService, private router: Router) { }
 
   ngOnInit() {
+    this.addresses.push(new Address());
   }
 
   newAddress(): void {
-    this.submitted = false;
-    this.address = new Address();
+    this.addresses.push(new Address());
   }
 
-  onSubmit() {
-    this.submitted = true;
+  deleteAddress(address: Address) {
+    const idx = this.addresses.indexOf(address);
+    this.addresses.splice(idx, 1);
   }
 
-  gotoList() {
-    this.router.navigate(['/kontakty']);
+  ngOnDestroy(): void {
   }
-
-
-
 }

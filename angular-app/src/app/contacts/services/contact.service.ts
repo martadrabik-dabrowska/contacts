@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, of, pipe} from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+import { MessageService } from './message.service';
 
 
 @Injectable({
@@ -15,17 +17,18 @@ export class ContactService {
     })
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private messageService: MessageService) {
+  }
 
   getData(): Observable<any[]> {
     return this.httpClient.get<any[]>(this.api + '/contacts/');
   }
 
 
-
 //
-  getContactId(id: number): Observable<any> {
-    return this.httpClient.get<any[]>(this.api + id);
+  getContactId(id: string): Observable<Contact[]> {
+    const url = this.api + '/contact/' + id;
+    return this.httpClient.get<Contact[]>(url);
   }
 
   addContact(contact: Contact): Observable<Contact> {
@@ -48,15 +51,30 @@ export class ContactService {
   }
 
 
+  private log(message: string) {
+    this.messageService.add(`HeroService: ${message}`);
+  }
 
+  /**
+   * Handle Http operation that failed.
+   * Let the app continue.
+   * @param operation - name of the operation that failed
+   * @param result - optional value to return as the observable result
+   */
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
 
+      // TODO: send the error to remote logging infrastructure
+      console.error(error); // log to console instead
 
+      // TODO: better job of transforming error for user consumption
+      this.log(`${operation} failed: ${error.message}`);
 
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
 
-
-
-
-
+  }
 }
 
 export class Company {
@@ -93,6 +111,8 @@ export  class Contact {
   additionalInfo: string;
   company: Company;
   person: Person;
+  wayOfObtaining: string;
+  wayOfObtainingOther: string;
   addresses: Address[];
 }
 

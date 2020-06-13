@@ -3,7 +3,9 @@ package pl.lists.contacts.controller;
 import org.springframework.web.bind.annotation.*;
 import pl.lists.contacts.model.Contact;
 import pl.lists.contacts.repository.ContactRepository;
+import pl.lists.contacts.repository.FakeData;
 
+import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.List;
 
@@ -19,7 +21,8 @@ public class ContactsController {
 
     @GetMapping("/contacts")
     List<Contact> all(){
-
+//        FakeData fakeData = new FakeData();
+//        return fakeData.createFakeContacts();
         return repository.findAll();
     }
 
@@ -27,11 +30,13 @@ public class ContactsController {
 
     @PostMapping("/contacts")
     Contact newContract(@RequestBody Contact newContact) {
+        newContact.updateContact();
         return repository.save(newContact);
     }
 
-    Contact one(@PathVariable Integer id){
-        return repository.findById(id).orElseThrow(()-> new EmptyStackException());
+    @RequestMapping(path="/contact/{id}", method = RequestMethod.GET)
+    List<Contact >one(@PathVariable Integer id){
+        return repository.findById(id).map(p-> Arrays.asList(p)).orElseThrow(()-> new EmptyStackException());
     }
 
     @PutMapping("/contacts/{id}")

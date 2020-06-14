@@ -17,7 +17,7 @@ export interface Way {
 })
 export class MethodOfAcquisitionComponent implements OnInit {
   @Input()
-  public methodAcquisition: string;
+  public methodOfAcquisition: string;
 
   submitted = false;
   constructor() { }

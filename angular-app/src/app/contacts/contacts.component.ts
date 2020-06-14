@@ -8,7 +8,7 @@ import {Contact, ContactService} from './services/contact.service';
 })
 export class ContactsComponent implements OnInit {
 contacts: Contact[];
-  public displayedColumns = ['name','type', 'email', 'phone' ,'edit']
+  public displayedColumns = ['name', 'type', 'email', 'phone' , 'edit', 'details']
 
   constructor(private contactRestApi: ContactService){}
 
@@ -44,10 +44,21 @@ contacts: Contact[];
   }
 
   getRouteLink(contact: Contact) {
-    if (null != contact.company){
-      return '/edytuj_firme';
-    } else if (null != contact.person){
-      return  '/edytuj_osobe';
+    if (null != contact.company) {
+      return '/edycja_firma';
+    } else if (null != contact.person) {
+      return  '/edycja_osoba_fizyczna';
     }
   }
+  showDetails(contact: Contact) {
+    if (null != contact.company) {
+      return '/szczegoly_kontaktu_firma';
+    } else if (null != contact.person) {
+      return  '/szczegoly_kontaktu';
+    }
+  }
+
+
+
+
 }

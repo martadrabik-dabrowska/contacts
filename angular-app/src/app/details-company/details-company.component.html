@@ -1,0 +1,64 @@
+<h2>Podsumowanie</h2>
+
+<hr/>
+<div *ngIf="contact">
+  <div>
+    <label><b>Nazwa firmy: </b></label> {{contact.company.name}}
+  </div>
+  <div>
+    <label><b>NIP: </b></label> {{contact.company.nip}}
+  </div>
+  <div>
+    <label><b>REGON: </b></label> {{contact.company.regon}}
+  </div>
+  <div>
+    <label><b>KRS: </b></label> {{contact.company.krs}}
+  </div>
+  <div>
+    <label><b>Forma prawna: </b></label> {{contact.company.legalForm}}
+  </div>
+  <div>
+    <label><b>Telefon: </b></label> {{contact.phoneNumber}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{contact.email}}
+  </div>
+
+
+
+  <div>
+    <label><b>Informacje dodatkowe: </b></label> {{contact.methodOfAcquisition}}
+  </div>
+  <div>
+    <label><b>Sposób pozyskania: </b></label> {{contact.phoneNumber}}
+  </div>
+  <div>
+    <label><b>Rekomendujący: </b></label> {{contact.methodOfAcquisition}}
+  </div>
+
+  <hr>
+
+  <h4>Adresy</h4>
+  <div style="width: 400px;">
+    <div *ngFor="let address of contact.addresses">
+      <div class="form-group">
+        {{address.name}}
+      </div>
+
+      <div class="form-group">
+        {{address.street}} {{address.houseNumber}}/{{address.flatNumber}}
+      </div>
+
+      <div class="form-group">
+        {{address.zipCode}} {{address.city}}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="showAll()" class="btn btn-primary">Edycja</button><br>
+

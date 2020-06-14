@@ -1,3 +1,26 @@
+
 table {
-  width: 100%;
+  width: 1000px;
+
+
+  border : 1px solid black;
+  color: green;
+}
+/*.basic-container {*/
+/*  padding: 100px;*/
+/*}*/
+
+.table{
+  width: 150px;
+
+
+  color: green;
+}
+
+.td{
+
+  margin-bottom: 10px;
+  margin-left: 30px;
+  color: red;
+  width: 150px;
 }

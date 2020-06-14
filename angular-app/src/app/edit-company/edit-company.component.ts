@@ -1,35 +1,25 @@
-import {AfterViewInit, ApplicationRef, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
-
-import {Router} from '@angular/router';
-
-import {Contact, ContactService} from '../contacts/services/contact.service';
+import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
 import {PersonGeneralInformationsComponent} from '../contact-parts/person-general-informations/person-general-informations.component';
 import {MethodOfAcquisitionComponent} from '../contact-parts/method-of-acquisition/method-of-acquisition.component';
 import {AddressComponent} from '../contact-parts/address/address.component';
-import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
-import { ActivatedRoute } from '@angular/router';
-export interface Way {
-  value: string;
-  viewValue: string;
-}
-
-
+import {Contact, ContactService} from '../contacts/services/contact.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormControl, Validators} from '@angular/forms';
+import {Way} from '../add-contact/add-contact.component';
 
 @Component({
-  selector: 'app-add-contact',
-  templateUrl: './add-contact.component.html',
-  styleUrls: ['./add-contact.component.css']
+  selector: 'app-edit-company',
+  templateUrl: './edit-company.component.html',
+  styleUrls: ['./edit-company.component.css']
 })
-export class AddContactComponent implements OnInit, AfterViewInit {
+export class EditCompanyComponent implements OnInit {
+
 
 
   // @ts-ignore
   @ViewChild('companya', {read: CompanyGeneralInformationsComponent, static: false})
   company: CompanyGeneralInformationsComponent;
-  // @ts-ignore
-  @ViewChild('person', {read: PersonGeneralInformationsComponent, static: false})
-  person: PersonGeneralInformationsComponent;
   // @ts-ignore
   @ViewChild('methodOfAcquisitionComponent', {read: MethodOfAcquisitionComponent, static: false})
   methodOfAcquisition: MethodOfAcquisitionComponent;
@@ -40,13 +30,12 @@ export class AddContactComponent implements OnInit, AfterViewInit {
 
 
   // tslint:disable-next-line:max-line-length
-  constructor(private contactService: ContactService, private router: Router) {
+  constructor(private contactService: ContactService, private router: Router, private route: ActivatedRoute, private ref: ChangeDetectorRef){
 
   }
 
   contact: Contact = new Contact();
   submitted = false;
-  isShow = 'PERSON';
   address: AddressComponent;
   recomendate: MethodOfAcquisitionComponent;
   wayControl = new FormControl('', [Validators.required]);
@@ -62,7 +51,30 @@ export class AddContactComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
-    this.contact = new Contact();
+  }
+
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngAfterViewInit() {
+    let id = null;
+    this.route.queryParams.subscribe(params => id = params.id);
+    if (null != id) {
+      this.contactService.getContactId(id)
+        .subscribe(((res: any[]) => {
+          this.contact = res[0];
+          this.updateToOtherModule(this.contact);
+        }));
+    } else {
+      this.contact = new Contact();
+    }
+  }
+
+
+  updateToOtherModule(contact: Contact) {
+    this.ref.detectChanges();
+    this.company.companyy = contact.company;
+    this.methodOfAcquisition.methodOfAcquisition = contact.wayOfObtaining
+    this.addressComponent.addresses = contact.addresses;
   }
 
   getErrorMessage() {
@@ -73,18 +85,17 @@ export class AddContactComponent implements OnInit, AfterViewInit {
     return this.email.hasError('email') ? 'Niepoprawny adres email' : '';
   }
 
+
+
+
+
   newEmployee(): void {
     this.submitted = false;
     this.contact = new Contact();
   }
 
   save() {
-  //  this.contact.addresses.push( this.address.address);
-    if (this.isShow === 'PERSON') {
-      this.contact.person = this.person.person;
-    } else if (this.isShow === 'COMPANY') {
-      this.contact.company = this.company.companyy;
-    }
+    this.contact.company = this.company.companyy;
     this.contact.wayOfObtaining = this.methodOfAcquisition.methodOfAcquisition;
     this.contact.addresses = this.addressComponent.addresses;
     this.contactService.addContact(this.contact)
@@ -101,13 +112,6 @@ export class AddContactComponent implements OnInit, AfterViewInit {
   gotoList() {
     this.router.navigate(['/kontakty']);
   }
-
-  ngAfterViewInit(): void {
-  }
-
-
-
-
 
 
 }

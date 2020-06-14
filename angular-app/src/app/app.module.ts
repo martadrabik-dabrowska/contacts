@@ -26,6 +26,10 @@ import {AddContactComponent} from './add-contact/add-contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EditCompanyComponent } from './edit-company/edit-company.component';
 import { EditPersonComponent } from './edit-person/edit-person.component';
+// @ts-ignore
+
+import { DetailsCompanyComponent } from './details-company/details-company.component';
+import { DetailsPersonComponent } from './details-person/details-person.component';
 
 
 
@@ -53,6 +57,8 @@ import { EditPersonComponent } from './edit-person/edit-person.component';
     MethodOfAcquisitionComponent,
     EditCompanyComponent,
     EditPersonComponent,
+    DetailsCompanyComponent,
+    DetailsPersonComponent,
   ],
   imports: [
     BrowserModule,

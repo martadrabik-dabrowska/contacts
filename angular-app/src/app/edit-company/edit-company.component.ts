@@ -89,10 +89,10 @@ export class EditCompanyComponent implements OnInit {
 
 
 
-  newEmployee(): void {
-    this.submitted = false;
-    this.contact = new Contact();
-  }
+  // newEmployee(): void {
+  //   //   this.submitted = false;
+  //   //   this.contact = new Contact();
+  //   // }
 
   save() {
     this.contact.company = this.company.companyy;

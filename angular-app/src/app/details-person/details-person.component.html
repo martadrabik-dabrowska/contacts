@@ -1,4 +1,4 @@
-<h2>Podsumowanie</h2>
+<h4>Podsumowanie</h4>
 
 <hr/>
 <div *ngIf="contact">
@@ -76,4 +76,4 @@
 
 <br>
 <br>
-<button (click)="showAll()" class="btn btn-primary">Edycja</button><br>
+<button [routerLink]="getRouteLink(contact)" [queryParams]="{id: contact.id}" class="btn btn-primary">Edycja</button><br>

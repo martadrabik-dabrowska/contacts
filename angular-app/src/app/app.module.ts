@@ -10,13 +10,19 @@ import { ContactsComponent } from './contacts/contacts.component';
 import {MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule} from '@angular/material/radio';
 import {HttpClientModule} from '@angular/common/http';
 
-// @ts-ignore
 
-import {MatButtonModule, MatCommonModule, MatFormFieldModule, MatSelectModule, MatTableModule} from '@angular/material';
+
+import {
+  _MatMenuDirectivesModule,
+  MatButtonModule,
+  MatCommonModule, MatDialog, MatDialogModule,
+  MatFormFieldModule, MatIconModule, MatMenuModule,
+  MatSelectModule,
+  MatTableModule, MatTabsModule
+} from '@angular/material';
 
 // @ts-ignore
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-
 import { AddressComponent } from './contact-parts/address/address.component';
 import { CompanyGeneralInformationsComponent } from './contact-parts/company-general-informations/company-general-informations.component';
 import { PersonGeneralInformationsComponent } from './contact-parts/person-general-informations/person-general-informations.component';
@@ -30,6 +36,12 @@ import { EditPersonComponent } from './edit-person/edit-person.component';
 
 import { DetailsCompanyComponent } from './details-company/details-company.component';
 import { DetailsPersonComponent } from './details-person/details-person.component';
+import { AddEmployeesComponent } from './employees/add-employees/add-employees.component';
+import { EmployeesListComponent } from './details-company/employees-list/employees-list.component';
+import { SummaryComponent } from './details-company/summary/summary.component';
+import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
+
+
 
 
 
@@ -59,6 +71,10 @@ import { DetailsPersonComponent } from './details-person/details-person.componen
     EditPersonComponent,
     DetailsCompanyComponent,
     DetailsPersonComponent,
+    AddEmployeesComponent,
+    EmployeesListComponent,
+    SummaryComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +89,13 @@ import { DetailsPersonComponent } from './details-person/details-person.componen
     MatButtonModule,
     HttpClientModule,
     MatTableModule,
-    MatCommonModule
+    MatCommonModule,
+    _MatMenuDirectivesModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTabsModule,
+    MatDialogModule
+
   ],
   exports: [
     MatRadioModule,

@@ -55,7 +55,7 @@ public class ContactsController {
     }
 
     @DeleteMapping("/contacts/{id}")
-    void deleteContract(@PathVariable Integer id) {
+    void deleteContact(@PathVariable Integer id) {
         repository.deleteById(id);
     }
 }

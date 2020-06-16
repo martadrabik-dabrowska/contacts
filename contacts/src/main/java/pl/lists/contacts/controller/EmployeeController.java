@@ -24,6 +24,12 @@ class EmployeeController {
         return repository.findAll();
     }
 
+    @GetMapping("/employeesList/{id}")
+    List<Employee> employeesByCompany(@PathVariable Integer id) {
+
+        return repository.employeesByCompanyId(id);
+    }
+
     @PostMapping("/employees")
     Employee newEmployee(@RequestBody Employee newEmployee) {
         return repository.save(newEmployee);

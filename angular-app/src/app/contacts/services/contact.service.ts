@@ -16,6 +16,7 @@ export class ContactService {
       'Content-Type': 'application/json'
     })
   }
+  private contact: Contact;
 
   constructor(private httpClient: HttpClient, private messageService: MessageService) {
   }
@@ -34,6 +35,12 @@ export class ContactService {
   addContact(contact: Contact): Observable<Contact> {
     return this.httpClient.post<Contact>(this.api + '/contacts/', contact);
   }
+
+
+
+  // deleteContact(id: number): Observable<Contact> {
+  //   return this.httpClient.delete<Contact>(this.api + '/contacts/');
+  // }
 
   // @ts-ignore
   updateCompany(id: number, value: any): Observable<RootObject> {
@@ -74,6 +81,18 @@ export class ContactService {
       return of(result as T);
     };
 
+  }
+
+  getContactsList(): Observable<any> {
+    return this.httpClient.get(this.api + '/contacts');
+  }
+
+  deleteContact(id: number): Observable<any> {
+    return this.httpClient.delete(this.api + '/contacts/' + id);
+  }
+
+  deleteEmployee(id: number): Observable<any> {
+    return this.httpClient.delete(this.api + '/employees/' + id);
   }
 }
 
@@ -116,12 +135,12 @@ export  class Contact {
   addresses: Address[];
 }
 
-export class Employee {
-  id: number;
-  firstName: string;
-  surname: string;
-  position: string;
-  phoneNumber: number;
-  isActive: string;
-  company: Company;
-}
+// export class Employee {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
+//   position: string;
+//   phoneNumber: number;
+//   isActive: string;
+//   company: Company;
+// }

@@ -25,7 +25,7 @@ export class AddContactComponent implements OnInit, AfterViewInit {
 
 
   // @ts-ignore
-  @ViewChild('companya', {read: CompanyGeneralInformationsComponent, static: false})
+  @ViewChild('company', {read: CompanyGeneralInformationsComponent, static: false})
   company: CompanyGeneralInformationsComponent;
   // @ts-ignore
   @ViewChild('person', {read: PersonGeneralInformationsComponent, static: false})
@@ -73,7 +73,7 @@ export class AddContactComponent implements OnInit, AfterViewInit {
     return this.email.hasError('email') ? 'Niepoprawny adres email' : '';
   }
 
-  newEmployee(): void {
+  newContact(): void {
     this.submitted = false;
     this.contact = new Contact();
   }

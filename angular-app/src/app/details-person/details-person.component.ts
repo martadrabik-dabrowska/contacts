@@ -35,5 +35,10 @@ export class DetailsPersonComponent implements OnInit {
     }
   }
 
+  getRouteLink(contact: Contact) {
+      return  '/edycja_osoba_fizyczna';
+
+  }
+
   // this.id = this.route.snapshot.params[this.id];
 }

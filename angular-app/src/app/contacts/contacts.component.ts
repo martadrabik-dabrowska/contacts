@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Contact, ContactService} from './services/contact.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {Address, Contact, ContactService} from './services/contact.service';
 import {Observable} from 'rxjs';
 import {Employee} from './services/employee.service';
 import {Router} from '@angular/router';
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-contacts: Observable<Contact[]>;
+  contacts: Observable<Contact[]>;
   public displayedColumns = ['name', 'type', 'email', 'phone' , 'edit', 'delete']
   private contact: Contact;
 
@@ -19,8 +19,8 @@ contacts: Observable<Contact[]>;
 
   ngOnInit() {
 
-     this.reloadData();
-     }
+    this.reloadData();
+  }
 
   getContactName(contact){
     if (null != contact.company){
@@ -93,4 +93,6 @@ contacts: Observable<Contact[]>;
   updateContact() {
     this.router.navigate(['/szczegoly_kontaktu']);
   }
+
+
 }

@@ -2,6 +2,7 @@ package pl.lists.contacts.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Company {
     @Column(name = "id")
     private int id;
 
+    @NonNull
     @Column(name = "name")
     private String name;
 

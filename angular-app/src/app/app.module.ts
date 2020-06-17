@@ -15,8 +15,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {
   _MatMenuDirectivesModule,
   MatButtonModule,
-  MatCommonModule, MatDialog, MatDialogModule,
-  MatFormFieldModule, MatIconModule, MatMenuModule,
+  MatCommonModule, MatDialogModule,
+  MatFormFieldModule, MatIconModule, MatMenuModule, MatPaginatorModule,
   MatSelectModule,
   MatTableModule, MatTabsModule
 } from '@angular/material';
@@ -26,7 +26,7 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import { AddressComponent } from './contact-parts/address/address.component';
 import { CompanyGeneralInformationsComponent } from './contact-parts/company-general-informations/company-general-informations.component';
 import { PersonGeneralInformationsComponent } from './contact-parts/person-general-informations/person-general-informations.component';
-import { MethodOfAcquisitionComponent } from './contact-parts/method-of-acquisition/method-of-acquisition.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AddContactComponent} from './add-contact/add-contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -40,6 +40,7 @@ import { AddEmployeesComponent } from './employees/add-employees/add-employees.c
 import { EmployeesListComponent } from './details-company/employees-list/employees-list.component';
 import { SummaryComponent } from './details-company/summary/summary.component';
 import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
+import {WayOfObtainingComponent} from './contact-parts/way-of-obtaining/way-of-obtaining.component';
 
 
 
@@ -66,7 +67,7 @@ import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.c
     AddressComponent,
     CompanyGeneralInformationsComponent,
     PersonGeneralInformationsComponent,
-    MethodOfAcquisitionComponent,
+    WayOfObtainingComponent,
     EditCompanyComponent,
     EditPersonComponent,
     DetailsCompanyComponent,
@@ -94,7 +95,8 @@ import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.c
     MatMenuModule,
     MatIconModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
 
   ],
   exports: [

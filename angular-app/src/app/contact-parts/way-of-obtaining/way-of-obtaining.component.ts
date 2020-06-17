@@ -1,23 +1,17 @@
-import {Component, Injectable, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import {Way} from '../../add-contact/add-contact.component';
 
 
-export interface Way {
-  value: string;
-  viewValue: string;
-}
 @Component({
-  selector: 'app-method-of-acquisition',
-  templateUrl: './method-of-acquisition.component.html',
-  styleUrls: ['./method-of-acquisition.component.css']
+  selector: 'app-way-of-obtaining',
+  templateUrl: './way-of-obtaining.component.html',
+  styleUrls: ['./way-of-obtaining.component.css']
 })
+export class WayOfObtainingComponent implements OnInit {
 
-@Injectable({
-  providedIn: 'root'
-})
-export class MethodOfAcquisitionComponent implements OnInit {
   @Input()
-  public methodOfAcquisition: string;
+  public wayOfObtaining: string;
 
   submitted = false;
   constructor() { }

@@ -1,11 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {Employee, EmployeeService} from '../../contacts/services/employee.service';
-import {AddressComponent} from '../../contact-parts/address/address.component';
-import {MethodOfAcquisitionComponent} from '../../contact-parts/method-of-acquisition/method-of-acquisition.component';
-import {FormControl, Validators} from '@angular/forms';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import {Company} from '../../contacts/services/contact.service';
+import {Employee, EmployeeService} from '../../contacts/services/employee.service';
 
 @Component({
   selector: 'app-add-employees',

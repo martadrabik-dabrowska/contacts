@@ -131,6 +131,8 @@ export  class Contact {
   company: Company;
   person: Person;
   wayOfObtaining: string;
+  legalForm: string;
+
   wayOfObtainingOther: string;
   addresses: Address[];
 }

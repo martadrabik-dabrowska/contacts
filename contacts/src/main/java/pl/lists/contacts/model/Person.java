@@ -2,6 +2,7 @@ package pl.lists.contacts.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
 
@@ -18,8 +19,10 @@ public class Person {
     @Column(name = "firstName")
     private String firstName;
 
+    @NotNull
     @Column(name = "lastName")
     private String lastName;
+
 
     @Column(name = "pesel")
     private long pesel;

@@ -1,8 +1,9 @@
 import {Component, EventEmitter, Injectable, Input, OnInit, Output} from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
+
 import {Contact, Person} from '../../contacts/services/contact.service';
 import {PersonService} from '../../contacts/services/person.service';
 import {Router} from '@angular/router';
+import {FormControl, Validators} from '@angular/forms';
 
 
 @Component({

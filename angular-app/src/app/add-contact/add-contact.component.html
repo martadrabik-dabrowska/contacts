@@ -16,7 +16,7 @@
   <!--Telefon-->
   <div class="form-group">
     <label for="phoneNumber">Telefon</label>
-    <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="contact.phoneNumber" name="phoneNumber" >
+    <input type="tel" class="form-control" id="phoneNumber" required [(ngModel)]="contact.phoneNumber" name="phoneNumber" >
   </div>
 
   <!--    Email-->
@@ -29,11 +29,12 @@
   <!--    Additional information-->
   <div class="form-group">
     <label for="additionalInformation">Informacje dodatkowe</label>
-    <textarea class="form-control" id="additionalInformation" required [(ngModel)]="contact.additionalInfo" name="additionalInformation"></textarea>
+    <textarea [(ngModel)]="contact.additionalInfo" class="form-control" id="additionalInformation" name="additionalInformation"
+              required></textarea>
   </div>
 
   <app-address #address [formControl]="submitted"></app-address>
-  <app-method-of-acquisition #methodOfAcquisitionComponent></app-method-of-acquisition>
+  <app-way-of-obtaining #wayOfObtainingComponent></app-way-of-obtaining>
   <router-outlet></router-outlet>
 </div>
   <div id="submit">
@@ -248,41 +249,4 @@
 
 
 
-
-
-<!--<div [hidden]="submitted" style="width: 400px;">-->
-<!--  <form (ngSubmit)="onSubmit()">-->
-<!--    <div class="form-group">-->
-<!--      <label for="firstName">Imię</label>-->
-<!--      <input type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName">-->
-<!--    </div>-->
-
-<!--    <div class="form-group">-->
-<!--      <label for="surname">Nazwisko</label>-->
-<!--      <input type="text" class="form-control" id="surname" required [(ngModel)]="employee.surname" name="surname">-->
-<!--    </div>-->
-
-<!--    <div class="form-group">-->
-<!--      <label for="position">Pozycja</label>-->
-<!--      <input type="text" class="form-control" id="position" required [(ngModel)]="employee.position" name="position">-->
-<!--    </div>-->
-
-<!--    <div class="form-group">-->
-<!--      <label for="phoneNumber">Numer telefonu</label>-->
-<!--      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="employee.phoneNumber" name="phoneNumber">-->
-<!--    </div>-->
-
-<!--    <div class="form-group">-->
-<!--      <label for="status">Status</label>-->
-<!--      <input type="text" class="form-control" id="status" required [(ngModel)]="employee.status" name="status">-->
-<!--    </div>-->
-
-<!--    <button type="submit" class="btn btn-success">Submit</button>-->
-<!--  </form>-->
-<!--</div>-->
-
-<!--<div [hidden]="!submitted">-->
-<!--  <h4>You submitted successfully!</h4>-->
-<!--  &lt;!&ndash; <button class="btn btn-success" (click)="newEmployee()">Add</button> &ndash;&gt;-->
-<!--</div>-->
 

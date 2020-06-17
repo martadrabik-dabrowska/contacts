@@ -1,8 +1,10 @@
 import {Component, Injectable, Input, OnInit} from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
-import {Router} from "@angular/router";
+
 import {Company} from '../../contacts/services/contact.service';
 import {CompanyService} from '../../contacts/services/company.service';
+
+import {FormControl, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-company-general-informations',
   templateUrl: './company-general-informations.component.html',
@@ -12,13 +14,26 @@ import {CompanyService} from '../../contacts/services/company.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyGeneralInformationsComponent{
+
+
+export class CompanyGeneralInformationsComponent {
+  constructor(private companyService: CompanyService, private router: Router) { }
   @Input()
   public companyy: Company = new Company();
   submitted = false;
 
   email = new FormControl('', [Validators.required, Validators.email]);
-  constructor(private companyService: CompanyService, private router: Router) { }
+
+
+
+  legalControl = new FormControl('', [Validators.required]);
+  forms: Form[] = [
+    {value: 'STOCK_COMPANY', viewValue: 'Spółka akcyja'},
+    {value: 'PARTNERSHIP_COMPANY', viewValue: 'Spółka cywilna'},
+    {value: 'SLAW_COMPANY', viewValue: 'Spółka prawna'},
+    {value: 'LIMITED_COMPANY', viewValue: 'Spółka zoo'},
+    {value: 'OTHER', viewValue: 'Inne'}
+  ];
 
 
   getErrorMessage() {
@@ -50,4 +65,9 @@ export class CompanyGeneralInformationsComponent{
     this.router.navigate(['/kontakt']);
   }
 
+}
+
+export interface Form {
+  value: string;
+  viewValue: string;
 }

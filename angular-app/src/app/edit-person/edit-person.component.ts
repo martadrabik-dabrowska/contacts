@@ -1,12 +1,13 @@
 import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
 import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
 import {PersonGeneralInformationsComponent} from '../contact-parts/person-general-informations/person-general-informations.component';
-import {MethodOfAcquisitionComponent} from '../contact-parts/method-of-acquisition/method-of-acquisition.component';
+
 import {AddressComponent} from '../contact-parts/address/address.component';
 import {Contact, ContactService} from '../contacts/services/contact.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormControl, Validators} from '@angular/forms';
 import {Way} from '../add-contact/add-contact.component';
+import {WayOfObtainingComponent} from '../contact-parts/way-of-obtaining/way-of-obtaining.component';
 
 @Component({
   selector: 'app-edit-person',
@@ -19,8 +20,8 @@ export class EditPersonComponent implements OnInit {
   @ViewChild('person', {read: PersonGeneralInformationsComponent, static: false})
   person: PersonGeneralInformationsComponent;
   // @ts-ignore
-  @ViewChild('methodOfAcquisitionComponent', {read: MethodOfAcquisitionComponent, static: false})
-  methodOfAcquisition: MethodOfAcquisitionComponent;
+  @ViewChild('wayOfObtainingComponent', {read: WayOfObtainingComponent, static: false})
+  wayOfObtainingComponent: WayOfObtainingComponent;
   // @ts-ignore
   @ViewChild('address', {read: AddressComponent, static: false})
   addressComponent: AddressComponent;
@@ -35,7 +36,7 @@ export class EditPersonComponent implements OnInit {
   contact: Contact = new Contact();
   submitted = false;
   address: AddressComponent;
-  recomendate: MethodOfAcquisitionComponent;
+  recomendate: WayOfObtainingComponent;
   wayControl = new FormControl('', [Validators.required]);
   email = new FormControl('', [Validators.required, Validators.email]);
 
@@ -71,7 +72,7 @@ export class EditPersonComponent implements OnInit {
   updateToOtherModule(contact: Contact) {
     this.ref.detectChanges();
     this.person.person = contact.person;
-    this.methodOfAcquisition.methodOfAcquisition = contact.wayOfObtaining
+    this.wayOfObtainingComponent.wayOfObtaining = contact.wayOfObtaining
     this.addressComponent.addresses = contact.addresses;
   }
 
@@ -96,7 +97,7 @@ export class EditPersonComponent implements OnInit {
     //  this.contact.addresses.push( this.address.address);
     this.contact.person = this.person.person;
 
-    this.contact.wayOfObtaining = this.methodOfAcquisition.methodOfAcquisition;
+    this.contact.wayOfObtaining = this.wayOfObtainingComponent.wayOfObtaining;
     this.contact.addresses = this.addressComponent.addresses;
     this.contactService.addContact(this.contact)
       .subscribe(data => console.log(data), error => console.log(error));

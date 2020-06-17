@@ -5,16 +5,17 @@ import {Router} from '@angular/router';
 
 import {Contact, ContactService} from '../contacts/services/contact.service';
 import {PersonGeneralInformationsComponent} from '../contact-parts/person-general-informations/person-general-informations.component';
-import {MethodOfAcquisitionComponent} from '../contact-parts/method-of-acquisition/method-of-acquisition.component';
+
 import {AddressComponent} from '../contact-parts/address/address.component';
 import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
 import { ActivatedRoute } from '@angular/router';
+import {WayOfObtainingComponent} from '../contact-parts/way-of-obtaining/way-of-obtaining.component';
+
+
 export interface Way {
   value: string;
   viewValue: string;
 }
-
-
 
 @Component({
   selector: 'app-add-contact',
@@ -31,8 +32,8 @@ export class AddContactComponent implements OnInit, AfterViewInit {
   @ViewChild('person', {read: PersonGeneralInformationsComponent, static: false})
   person: PersonGeneralInformationsComponent;
   // @ts-ignore
-  @ViewChild('methodOfAcquisitionComponent', {read: MethodOfAcquisitionComponent, static: false})
-  methodOfAcquisition: MethodOfAcquisitionComponent;
+  @ViewChild('wayOfObtainingComponent', {read: WayOfObtainingComponent, static: false})
+  wayOfObtaining: WayOfObtainingComponent;
   // @ts-ignore
   @ViewChild('address', {read: AddressComponent, static: false})
   addressComponent: AddressComponent;
@@ -48,17 +49,17 @@ export class AddContactComponent implements OnInit, AfterViewInit {
   submitted = false;
   isShow = 'PERSON';
   address: AddressComponent;
-  recomendate: MethodOfAcquisitionComponent;
-  wayControl = new FormControl('', [Validators.required]);
+  recomendate: WayOfObtainingComponent;
+  // wayControl = new FormControl('', [Validators.required]);
   email = new FormControl('', [Validators.required, Validators.email]);
 
-  ways: Way[] = [
-    {value: 'recommendation', viewValue: 'Rekomendacja'},
-    {value: 'conference', viewValue: 'konferencja i szkolenie'},
-    {value: 'social media', viewValue: 'media społęcznościowe'},
-    {value: 'web page', viewValue: 'strona www'},
-    {value: 'other', viewValue: 'inne'}
-  ];
+  // ways: Way[] = [
+  //   {value: 'recommendation', viewValue: 'Rekomendacja'},
+  //   {value: 'conference', viewValue: 'konferencja i szkolenie'},
+  //   {value: 'social media', viewValue: 'media społęcznościowe'},
+  //   {value: 'web page', viewValue: 'strona www'},
+  //   {value: 'other', viewValue: 'inne'}
+  // ];
 
 
   ngOnInit(): void {
@@ -85,7 +86,7 @@ export class AddContactComponent implements OnInit, AfterViewInit {
     } else if (this.isShow === 'COMPANY') {
       this.contact.company = this.company.companyy;
     }
-    this.contact.wayOfObtaining = this.methodOfAcquisition.methodOfAcquisition;
+    this.contact.wayOfObtaining = this.wayOfObtaining.wayOfObtaining;
     this.contact.addresses = this.addressComponent.addresses;
     this.contactService.addContact(this.contact)
       .subscribe(data => console.log(data), error => console.log(error));

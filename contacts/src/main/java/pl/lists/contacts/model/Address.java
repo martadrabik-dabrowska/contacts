@@ -25,6 +25,7 @@ public class Address {
     @Column(name = "flatNumber")
     private String flatNumber;
 
+
     @Column(name = "zipCode")
     private String zipCode;
 
@@ -34,7 +35,7 @@ public class Address {
     @Column(name = "name")
     private String name;
 
-    @OneToOne(cascade=CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "contract")
     @JsonIgnore
     private Contact contact;

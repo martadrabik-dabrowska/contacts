@@ -132,8 +132,7 @@ export  class Contact {
   person: Person;
   wayOfObtaining: string;
   legalForm: string;
-
-  wayOfObtainingOther: string;
+  recommending: string;
   addresses: Address[];
 }
 

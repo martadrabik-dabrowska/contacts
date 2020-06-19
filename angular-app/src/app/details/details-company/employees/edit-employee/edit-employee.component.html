@@ -1,0 +1,42 @@
+<mat-dialog-content>
+  <h3>Edytuj pracownika</h3>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <div class="container">
+      <!--Imię-->
+      <div class="form-group">
+        <mat-label for="firstName">Imię</mat-label>
+        <input matInput type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName"  >
+      </div>
+      <!--Nazwisko-->
+      <div class="form-group">
+        <mat-label for="lastName">Nazwisko</mat-label>
+        <input matInput type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName" >
+      </div>
+      <!--    Stanowisko-->
+      <div class="form-group">
+        <mat-label for="position">Stanowisko</mat-label>
+        <input matInput type="text" class="form-control" id="position" required [(ngModel)]="employee.position" name="position"/>
+      </div>
+      <!--Telefon-->
+      <div class="form-group">
+        <mat-label for="phoneNumber">Telefon</mat-label>
+        <input matInput type="text" class="form-control" id="phoneNumber" required [(ngModel)]="employee.phoneNumber" name="phoneNumber" >
+      </div>
+      <!--   Status-->
+      <div class="form-group">
+        <mat-label for="status">Status</mat-label>
+        <input matInput type="checkbox" class="form-control" id="status" required [(ngModel)]="employee.active" name="status"/>
+      </div>
+
+    </div>
+<div class="mat-button">
+  <button type="button" class="btn btn-outline-success" (click)="save()">Zapisz</button>
+</div>
+
+</mat-dialog-actions>
+
+
+
+

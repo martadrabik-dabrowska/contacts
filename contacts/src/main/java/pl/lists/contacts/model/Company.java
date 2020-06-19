@@ -2,6 +2,8 @@ package pl.lists.contacts.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonRootName;
+import org.hibernate.validator.constraints.pl.NIP;
+import org.hibernate.validator.constraints.pl.REGON;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;

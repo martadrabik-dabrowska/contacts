@@ -1,0 +1,34 @@
+#left-position{
+  float: left;
+  width: 500px;
+}
+
+#right-position{
+  float: right;
+  width: 500px;
+  margin-right: 100px;
+}
+
+#bottom-position{
+  clear: both;
+}
+label{
+  text-align: center;
+}
+.label-div{
+  text-align: left;
+}
+button{
+  float: right;
+}
+
+.adress-style{
+  width: 800px;
+}
+hr{
+  width: 100%;
+}
+
+h4{
+  font-weight: bold;
+}

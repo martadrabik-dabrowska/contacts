@@ -1,2 +1,9 @@
 @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";/* You can add global styles to this file, and also import other style files */
 
+hr {
+  color:black;
+  background:black;
+  height:1px;
+  border:none;
+  width: 1000px;
+}

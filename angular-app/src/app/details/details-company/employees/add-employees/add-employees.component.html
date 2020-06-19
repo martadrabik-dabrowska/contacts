@@ -1,0 +1,36 @@
+<mat-dialog-content>
+  <h3>Dodaj pracownika</h3>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+<div class="container">
+
+  <div class="form-group">
+    <mat-label for="firstName">Imię</mat-label>
+    <input matInput type="text" class="form-control" id="firstName" required [(ngModel)]="employee.firstName" name="firstName" >
+  </div>
+
+  <div class="form-group">
+    <mat-label for="lastName">Nazwisko</mat-label>
+    <input matInput type="text" class="form-control" id="lastName" required [(ngModel)]="employee.lastName" name="lastName" >
+  </div>
+
+  <div class="form-group">
+    <mat-label for="position">Stanowisko</mat-label>
+    <input matInput type="text" class="form-control" id="position" required [(ngModel)]="employee.position" name="position"/>
+  </div>
+
+  <div class="form-group">
+    <mat-label for="phoneNumber">Telefon</mat-label>
+    <input matInput type="text" class="form-control" id="phoneNumber" required [(ngModel)]="employee.phoneNumber" name="phoneNumber" >
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button type="button" class="btn btn-outline-success" (click)="save()">Zapisz</button>
+</div>
+</mat-dialog-actions>
+
+
+
+

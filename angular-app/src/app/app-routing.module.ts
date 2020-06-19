@@ -3,17 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import {ContactsComponent} from './contacts/contacts.component';
-import {AddContactComponent} from './add-contact/add-contact.component';
-import {EditCompanyComponent} from './edit-company/edit-company.component';
-import {EditPersonComponent} from './edit-person/edit-person.component';
-import {DetailsPersonComponent} from './details-person/details-person.component';
-import {DetailsCompanyComponent} from './details-company/details-company.component';
-import {AddEmployeesComponent} from './employees/add-employees/add-employees.component';
-import {EmployeesListComponent} from './details-company/employees-list/employees-list.component';
-import {EditEmployeeComponent} from './employees/edit-employee/edit-employee.component';
+import {AddContactComponent} from './contacts/add-contact/add-contact.component';
+import {EditCompanyComponent} from './contacts/edit-company/edit-company.component';
+import {EditPersonComponent} from './contacts/edit-person/edit-person.component';
+import {DetailsPersonComponent} from './details/details-person/details-person.component';
+import {DetailsCompanyComponent} from './details/details-company/details-company.component';
+import {AddEmployeesComponent} from './details/details-company/employees/add-employees/add-employees.component';
+import {EmployeesListComponent} from './details/details-company/employees/employees-list/employees-list.component';
+import {EditEmployeeComponent} from './details/details-company/employees/edit-employee/edit-employee.component';
+import {AppComponent} from './app.component';
 
 
 const routes: Routes = [
+  {
+    path: '',
+    component: ContactsComponent
+  },
   {
     path: 'kontakty',
     component: ContactsComponent

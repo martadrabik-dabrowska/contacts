@@ -16,31 +16,33 @@ import {
   _MatMenuDirectivesModule,
   MatButtonModule,
   MatCommonModule, MatDialogModule,
-  MatFormFieldModule, MatIconModule, MatMenuModule, MatPaginatorModule,
+  MatFormFieldModule, MatIconModule, MatInputModule, MatMenuModule, MatPaginatorModule,
   MatSelectModule,
   MatTableModule, MatTabsModule
 } from '@angular/material';
 
 // @ts-ignore
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
-import { AddressComponent } from './contact-parts/address/address.component';
-import { CompanyGeneralInformationsComponent } from './contact-parts/company-general-informations/company-general-informations.component';
-import { PersonGeneralInformationsComponent } from './contact-parts/person-general-informations/person-general-informations.component';
+import { AddressComponent } from './contacts/contact-parts/address/address.component';
+import { CompanyGeneralInformationsComponent } from './contacts/contact-parts/company-general-informations/company-general-informations.component';
+import { PersonGeneralInformationsComponent } from './contacts/contact-parts/person-general-informations/person-general-informations.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {AddContactComponent} from './add-contact/add-contact.component';
+import {AddContactComponent} from './contacts/add-contact/add-contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { EditCompanyComponent } from './edit-company/edit-company.component';
-import { EditPersonComponent } from './edit-person/edit-person.component';
+import { EditCompanyComponent } from './contacts/edit-company/edit-company.component';
+import { EditPersonComponent } from './contacts/edit-person/edit-person.component';
+
+import { JwPaginationComponent } from 'jw-angular-pagination';
 // @ts-ignore
 
-import { DetailsCompanyComponent } from './details-company/details-company.component';
-import { DetailsPersonComponent } from './details-person/details-person.component';
-import { AddEmployeesComponent } from './employees/add-employees/add-employees.component';
-import { EmployeesListComponent } from './details-company/employees-list/employees-list.component';
-import { SummaryComponent } from './details-company/summary/summary.component';
-import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
-import {WayOfObtainingComponent} from './contact-parts/way-of-obtaining/way-of-obtaining.component';
+import { DetailsCompanyComponent } from './details/details-company/details-company.component';
+import { DetailsPersonComponent } from './details/details-person/details-person.component';
+import { AddEmployeesComponent } from './details/details-company/employees/add-employees/add-employees.component';
+import { EmployeesListComponent } from './details/details-company/employees/employees-list/employees-list.component';
+import { SummaryComponent } from './details/details-company/summary/summary.component';
+import { EditEmployeeComponent } from './details/details-company/employees/edit-employee/edit-employee.component';
+import {WayOfObtainingComponent} from './contacts/contact-parts/way-of-obtaining/way-of-obtaining.component';
 
 
 
@@ -75,7 +77,8 @@ import {WayOfObtainingComponent} from './contact-parts/way-of-obtaining/way-of-o
     AddEmployeesComponent,
     EmployeesListComponent,
     SummaryComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +99,8 @@ import {WayOfObtainingComponent} from './contact-parts/way-of-obtaining/way-of-o
     MatIconModule,
     MatTabsModule,
     MatDialogModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatInputModule
 
   ],
   exports: [

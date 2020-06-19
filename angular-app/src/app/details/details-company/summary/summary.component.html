@@ -1,0 +1,57 @@
+<div #aboveMenu>
+  <div id="left-position">
+  <div class="label-div">
+    <label><b>Nazwa firmy: </b></label> {{contact.company.name}}
+  </div>
+  <div class="label-div">
+    <label><b>NIP: </b></label> {{contact.company.nip}}
+  </div>
+  <div>
+    <label><b>REGON: </b></label> {{contact.company.regon}}
+  </div>
+  <div>
+    <label><b>KRS: </b></label> {{contact.company.krs}}
+  </div>
+  <div>
+    <label><b>Forma prawna: </b></label> {{getForms()}}
+  </div>
+  <div *ngIf="contact.company.legalForm=='OTHER'">
+    <label><b>Inna forma prawna: </b></label> {{contact.company.legalFormOther}}
+  </div>
+  <div>
+    <label><b>Telefon: </b></label> {{contact.phoneNumber}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{contact.email}}
+  </div>
+    <div>
+      <label><b>Informacje dodatkowe: </b></label> {{contact.additionalInfo}}
+    </div>
+  </div>
+<div id="right-position">
+  <div>
+    <label><b>Sposób pozyskania: </b></label> {{getWay()}}
+</div>
+  <div *ngIf="contact.wayOfObtaining=='RECOMENDATION'">
+    <label><b>Rekomendujący: </b></label> {{contact.recommending}}
+  </div>
+</div>
+  <div id="bottom-position">
+  <hr>
+  <h4>Adresy: </h4>
+  <div class="adress-style" style="width: 400px;">
+    <div *ngFor="let address of contact.addresses">
+      <div class="form-group" style="font-weight: bold">
+        {{address.name}}
+      </div>
+      <div class="form-group">
+        {{address.street}} {{address.houseNumber}}/{{address.flatNumber}}
+      </div>
+      <div class="form-group">
+        {{address.zipCode}} {{address.city}}
+      </div>
+    </div>
+  </div>
+</div>
+  <button [routerLink]="getRouteLink(contact)" [queryParams]="{id: contact.id}" class="btn btn-primary">Edycja</button><br>
+</div>

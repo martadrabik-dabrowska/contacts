@@ -2,35 +2,94 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d66f75e-4425-40ab-ab63-5b7d3042d5e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Marta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/jw-angular-pagination.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/jw-angular-pagination.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/lib/jw-pagination.component.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/lib/jw-pagination.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-angular-pagination/public-api.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-paginate/lib/jw-paginate.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jw-paginate/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/method-of-acquisition/method-of-acquisition.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/method-of-acquisition/method-of-acquisition.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/method-of-acquisition/method-of-acquisition.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/method-of-acquisition/method-of-acquisition.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/address/address.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/person-general-informations/person-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/way-of-obtaining/way-of-obtaining.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/way-of-obtaining/way-of-obtaining.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/way-of-obtaining/way-of-obtaining.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact-parts/way-of-obtaining/way-of-obtaining.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/way-of-obtaining/way-of-obtaining.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/services/company.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/services/company.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/contacts/services/contact.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/services/contact.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/set-status.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details-company/employees-list/set-status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.worker.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.worker.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/services/legal-form.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/services/person.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/services/way-of-obtaining.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/details-company.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/details-company.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/details-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/details-company.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/details-company.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/details-company.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/details-company.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/details-company.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/employees-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/employees-list/employees-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/employees-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/employees-list/employees-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/employees-list.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/employees-list/employees-list.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/employees-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/employees-list/employees-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/employees-list/set-status.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/employees-list/set-status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/summary/summary.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/summary/summary.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/summary/summary.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-company/summary/summary.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-person/details-person.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-person/details-person.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-person/details-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-person/details-person.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-person/details-person.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-person/details-person.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/details-person/details-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-person/details-person.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-company/edit-company.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/edit-person/edit-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/add-employees/add-employees.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/add-employees/add-employees.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/add-employees/add-employees.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/add-employees/add-employees.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/controller/ContactsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/controller/ContactsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/WayOfObtaining.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/model/WayOfObtaining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/repository/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/repository/ContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts/src/main/java/pl/lists/contacts/repository/FakeData.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +138,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projekt\kontakty\angular-app\src\app\contacts" />
+      <recent name="D:\projekt\kontakty\angular-app\src\app\details\details-company" />
+      <recent name="D:\projekt\kontakty\angular-app\src\app\details" />
       <recent name="D:\projekt\kontakty\angular-app\src\app\details-company" />
-      <recent name="D:\projekt\kontakty\angular-app\src\app\contact-parts" />
-      <recent name="D:\projekt\kontakty\angular-app\src\app\contacts\services" />
+      <recent name="D:\projekt\kontakty\angular-app\src\app\employees" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,7 +197,12 @@
       <workItem from="1591823534016" duration="2357000" />
       <workItem from="1591901537286" duration="102658000" />
       <workItem from="1592348288022" duration="479000" />
-      <workItem from="1592349398732" duration="15338000" />
+      <workItem from="1592349398732" duration="49920000" />
+      <workItem from="1592518729889" duration="1890000" />
+      <workItem from="1592556732764" duration="4184000" />
+      <workItem from="1592561069527" duration="1050000" />
+      <workItem from="1592562135057" duration="248000" />
+      <workItem from="1592562392317" duration="1274000" />
     </task>
     <servers />
   </component>
@@ -171,74 +237,79 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>90</line>
+          <url>file://$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts</url>
+          <line>72</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>93</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>91</line>
+          <url>file://$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts</url>
+          <line>73</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>83</line>
+          <url>file://$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts</url>
+          <line>65</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>84</line>
+          <url>file://$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts</url>
+          <line>66</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>86</line>
+          <url>file://$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts</url>
+          <line>68</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/add-contact/add-contact.component.ts</url>
-          <line>47</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/contact-parts/company-general-informations/company-general-informations.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.ts</url>
           <line>18</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/details-company/summary/summary.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts</url>
           <line>36</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/details-company/summary/summary.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts</url>
           <line>33</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.ts</url>
           <line>14</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.ts</url>
           <line>18</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/employees/edit-employee/edit-employee.component.ts</url>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/employees/edit-employee/edit-employee.component.ts</url>
           <line>23</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/employees/add-employees/add-employees.component.ts</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/employees/add-employees/add-employees.component.ts</url>
+          <line>33</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-routing.module.ts</url>
+          <line>21</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts</url>
+          <line>64</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts</url>
+          <line>62</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

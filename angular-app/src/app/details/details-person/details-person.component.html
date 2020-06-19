@@ -1,0 +1,53 @@
+<h4>Podsumowanie</h4>
+
+<hr/>
+<div *ngIf="contact">
+  <div>
+    <label><b>Imię: </b></label> {{contact.person.firstName}}
+  </div>
+  <div>
+    <label><b>Nazwisko: </b></label> {{contact.person.lastName}}
+  </div>
+  <div>
+    <label><b>PESEL: </b></label> {{contact.person.pesel}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{contact.email}}
+  </div>
+  <div>
+    <label><b>Telefon: </b></label> {{contact.phoneNumber}}
+  </div>
+
+  <div>
+    <label><b>Informacje dodatkowe: </b></label> {{contact.wayOfObtaining}}
+  </div>
+  <div>
+    <label><b>Sposób pozyskania: </b></label> {{contact.phoneNumber}}
+  </div>
+  <div>
+    <label><b>Rekomendujący: </b></label> {{contact.wayOfObtaining}}
+  </div>
+
+  <hr>
+
+  <h4>Adresy</h4>
+  <div style="width: 400px;">
+    <div *ngFor="let address of contact.addresses">
+      <div class="form-group">
+       {{address.name}}
+      </div>
+
+      <div class="form-group">
+        {{address.street}} {{address.houseNumber}}/{{address.flatNumber}}
+      </div>
+
+      <div class="form-group">
+        {{address.zipCode}} {{address.city}}
+      </div>
+      </div>
+  </div>
+</div>
+
+<br>
+<br>
+<button [routerLink]="getRouteLink(contact)" [queryParams]="{id: contact.id}" class="btn btn-primary">Edycja</button><br>

@@ -3,6 +3,7 @@ package pl.lists.contacts.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.sun.istack.internal.NotNull;
+import org.hibernate.validator.constraints.pl.PESEL;
 
 import javax.persistence.*;
 

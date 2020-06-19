@@ -1,0 +1,34 @@
+<h2 style="text-align: center">Edycja</h2>
+
+<br>
+<form (ngSubmit)="onSubmit()">
+
+  <div class="container">
+    <app-person-general-informations #person ></app-person-general-informations>
+
+    <div class="form-group">
+      <label for="phoneNumber">Telefon</label>
+      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="contact.phoneNumber" name="phoneNumber" >
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" [formControl]="email" [(ngModel)]="contact.email" id="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </div>
+
+
+    <div class="form-group">
+      <label for="additionalInformation">Informacje dodatkowe</label>
+      <textarea class="form-control" id="additionalInformation" required [(ngModel)]="contact.additionalInfo" name="additionalInformation"></textarea>
+    </div>
+
+    <app-address #address [formControl]="submitted"></app-address>
+    <app-way-of-obtaining #wayOfObtainingComponent></app-way-of-obtaining>
+    <router-outlet></router-outlet>
+  </div>
+  <div id="submit">
+    <button mat-button type="submit" class="btn btn-success" (click)="save()">Zapisz</button>
+  </div>
+</form>
+

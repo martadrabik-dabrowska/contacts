@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 import org.apache.commons.collections4.CollectionUtils;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.List;
 
 @Entity
@@ -19,6 +20,7 @@ public class Contact {
     @Column(name = "phoneNumber")
     private String phoneNumber;
 
+    @Email
     @Column(name = "email")
     private String email;
 
@@ -28,8 +30,8 @@ public class Contact {
     @Column(name = "wayOfObtaining")
     private WayOfObtaining wayOfObtaining;
 
-    @Column(name = "wayOfObtainingOther")
-    private String wayOfObtainingOther;
+    @Column(name = "recommending")
+    private String recommending;
 
     @OneToOne(fetch = FetchType.EAGER, mappedBy ="contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private Company company;
@@ -37,7 +39,7 @@ public class Contact {
     @OneToOne(fetch = FetchType.EAGER, mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private Person person;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "contact", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> addresses;
 
     public int getId() {
@@ -104,12 +106,13 @@ public class Contact {
         this.wayOfObtaining = wayOfObtaining;
     }
 
-    public String getWayOfObtainingOther() {
-        return wayOfObtainingOther;
+
+    public String getRecommending() {
+        return recommending;
     }
 
-    public void setWayOfObtainingOther(String wayOfObtainingOther) {
-        this.wayOfObtainingOther = wayOfObtainingOther;
+    public void setRecommending(String recommending) {
+        this.recommending = recommending;
     }
 
     public void updateContact() {

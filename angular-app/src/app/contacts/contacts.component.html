@@ -1,87 +1,9 @@
-<!--<div class="panel panel-primary">-->
-<!--  <div class="panel-heading">-->
-<!--    <h2>Lista kontaktów</h2>-->
-<div><button mat-button-toggle-group class="add new contact" routerLink="/dodaj_kontakt">Dodaj</button></div>
-<!--  </div>-->
-<!--  <div class="panel-body">-->
-<!--    <table class="table table-striped">-->
-<!--      <thead>-->
-<!--      <tr>-->
-<!--        <th>Nazwa kontaktu</th>-->
-<!--        <th>Rodzaj kontaktu</th>-->
-<!--        <th>Email</th>-->
-<!--        <th>Telefon</th>-->
-<!--        <th>Akcje</th>-->
-<!--      </tr>-->
-<!--      </thead>-->
-<!--      <tbody>-->
+<h2>Lista kontaktów</h2>
 
-<!--      <tr *ngFor="let employee of employees | async">-->
-<!--        <td>{{employee.firstName}}</td>-->
-<!--        <td>{{employee.lastName}}</td>-->
-<!--        <td>{{employee.emailId}}</td>-->
-<!--        <td><button (click)="deleteEmployee(employee.id)" class="btn btn-danger">Delete</button>-->
-<!--          <button (click)="updateEmployee(employee.id)" class="btn btn-info" style="margin-left: 10px">Update</button>-->
-<!--          <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button>-->
-<!--        </td>-->
-<!--      </tr>-->
-
-
-<!--      </tbody>-->
-<!--    </table>-->
-<!--  </div>-->
-<!--</div>-->
-
-
-<!--<table mat-table [dataSource]="contacts"  id="table" >-->
-<!--  <ng-container matColumnDef="name" >-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table" > Nazwa kontaktu </th>-->
-<!--    <td mat-cell *matCellDef="let contact" class="td" id="hover-contact" [routerLink]="showDetails(contact)" [queryParams]="{id: contact.id}"> {{getContactName(contact)}} </td>-->
-<!--  </ng-container>-->
-<!--  <ng-container matColumnDef="type">-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table"> Typ </th>-->
-<!--    <td mat-cell *matCellDef="let contact" class="td"> {{getContactType(contact)}} </td>-->
-<!--  </ng-container>-->
-<!--  <ng-container matColumnDef="email">-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table"> Email </th>-->
-<!--    <td mat-cell *matCellDef="let contact" class="td"> {{getEmail(contact)}} </td>-->
-<!--  </ng-container>-->
-<!--  <ng-container matColumnDef="phone">-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table"> Telefon </th>-->
-<!--    <td mat-cell *matCellDef="let contact" class="td"> {{getPhoneNumber(contact)}} </td>-->
-<!--  </ng-container>-->
-
-<!--  <ng-container matColumnDef="edit">-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table"> Edytuj </th>-->
-<!--    <td>-->
-<!--      <mat-icon aria-hidden="false" aria-label="Example create-black icon">create</mat-icon>-->
-<!--      <mat-icon aria-hidden="false" aria-label="Example close-black icon" (click)="deleteContact(contact.id)" id="delete-hover">close</mat-icon>-->
-
-<!--    </td>-->
-
-
-<!--    <td mat-cell *matCellDef="let contact">-->
-<!--      <button mat-button-toggle-group class="add new contact" [routerLink]="getRouteLink(contact)" [queryParams]="{id: contact.id}">Edytuj</button>-->
-<!--    </td>-->
-<!--  </ng-container>-->
-
-<!--  <ng-container matColumnDef="delete">-->
-<!--    <th mat-header-cell *matHeaderCellDef class="table"> Usun </th>-->
-<!--    <td mat-cell *matCellDef="let contact">-->
-<!--&lt;!&ndash;      <button mat-button-toggle-group class="delete contact" [routerLink]="deleteContact(contact)" [queryParams]="{id: contact.id}">Usuń</button>&ndash;&gt;-->
-<!--    </td>-->
-<!--  </ng-container>-->
-
-
-<!--  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>-->
-<!--  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>-->
-
-<!--</table>-->
-<!--<mat-icon aria-hidden="false" aria-label="Example create-black icon">create</mat-icon>-->
-<!--<mat-icon aria-hidden="false" aria-label="Example close-black icon" (click)="deleteContact(contact.id)" id="delete-hover">close</mat-icon>-->
-
+<div><button mat-button-toggle-group class="add-contact-button" routerLink="/dodaj_kontakt">Dodaj</button></div>
+<br>
 <div class="panel-body">
-  <table class="table table-striped">
+  <table class="table table-striped" >
     <thead>
     <tr class="border-element">
       <th class="border-element">Nazwa kontaktu</th>
@@ -93,29 +15,24 @@
     </thead>
     <tbody>
 
-    <tr *ngFor="let contact of contacts | async">
-      <td id="hover-contact" [routerLink]="showDetails(contact)" [queryParams]="{id: contact.id}">{{getContactName(contact)}}</td>
+    <tr *ngFor="let contact of pageOfItems">
+      <td id="hover-contact" [routerLink]="showDetails(contact)"
+          [queryParams]="{id: contact.id}">{{getContactName(contact)}}</td>
       <td>{{getContactType(contact)}}</td>
       <td>{{getEmail(contact)}}</td>
       <td>{{getPhoneNumber(contact)}}</td>
-
       <td>
-        <mat-icon aria-hidden="false" aria-label="Example create-black icon" [routerLink]="getRouteLink(contact)" [queryParams]="{id: contact.id}" class="hover-icons">create</mat-icon>
-        <mat-icon aria-hidden="false" aria-label="Example close-black icon" (click)="deleteContact(contact.id)" class="hover-icons">close</mat-icon>
-
+        <mat-icon aria-hidden="false" aria-label="Example create-black icon" [routerLink]="getRouteLink(contact)"
+                  [queryParams]="{id: contact.id}" class="hover-icons">create
+        </mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example close-black icon" (click)="deleteContact(contact.id)"
+                  class="hover-icons">close
+        </mat-icon>
       </td>
-
-      <!--      <td>-->
-      <!--              <button-->
-      <!--                (click)="deleteEmployee(employee.id)" -->
-      <!--                class="btn btn-danger">Delete</button>-->
-      <!--              <button-->
-      <!--          (click)="updateEmployee(employee.id)" -->
-      <!--          class="btn btn-info" style="margin-left: 10px">Update</button>-->
-      <!--      </td>-->
     </tr>
-
-
     </tbody>
   </table>
+  <div class="pagination">
+    <jw-pagination [items]="items" (changePage)="onChangePage($event)" [pageSize]="3"></jw-pagination>
+  </div>
 </div>

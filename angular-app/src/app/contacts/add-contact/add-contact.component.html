@@ -1,0 +1,39 @@
+<h2>Dodaj kontakt</h2>
+<br>
+<h5>Rodzaj kontaktu</h5>
+<br>
+<form (ngSubmit)="onSubmit()"  class="mat-form-field-appearance-legacy">
+<mat-radio-group aria-label="Select an option" >
+
+  <mat-radio-button value="person" checked (click)="isShow='PERSON'">Osoba fizyczna</mat-radio-button>
+  <mat-radio-button value="company" (click)="isShow='COMPANY'">Firma</mat-radio-button>
+</mat-radio-group>
+
+<div class="example-container">
+  <app-person-general-informations #person *ngIf="isShow == 'PERSON'" ></app-person-general-informations>
+  <app-company-general-informations #company *ngIf="isShow == 'COMPANY'"></app-company-general-informations>
+
+  <div class="form-group">
+    <label for="phoneNumber">Telefon</label>
+    <input type="tel" class="form-control" id="phoneNumber" [(ngModel)]="contact.phoneNumber" name="phoneNumber">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" required class="form-control" [(ngModel)]="contact.email" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="additionalInformation">Informacje dodatkowe</label>
+    <textarea type="text" [(ngModel)]="contact.additionalInfo" class="form-control" id="additionalInformation"
+              name="additionalInformation"></textarea>
+  </div>
+
+  <app-address #address [formControl]="submitted"></app-address>
+  <app-way-of-obtaining #wayOfObtainingComponent></app-way-of-obtaining>
+  <router-outlet></router-outlet>
+</div>
+  <div id="submit">
+    <button type="submit" class="btn btn-outline-success" (click)="save()">Zapisz</button>
+  </div>
+</form>

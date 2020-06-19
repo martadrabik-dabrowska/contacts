@@ -1,0 +1,16 @@
+#summary{
+  float: left;
+}
+
+#employees{
+  float: right;
+
+}
+
+.mat-tab-group {
+width: 100%;
+  margin-left : 50px ;
+  margin-right: 150px;
+  margin-bottom: 40px;
+}
+

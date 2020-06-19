@@ -3,7 +3,7 @@ package pl.lists.contacts.controller;
 import org.springframework.web.bind.annotation.*;
 import pl.lists.contacts.model.Contact;
 import pl.lists.contacts.repository.ContactRepository;
-import pl.lists.contacts.repository.FakeData;
+
 
 import java.util.Arrays;
 import java.util.EmptyStackException;
@@ -21,12 +21,9 @@ public class ContactsController {
 
     @GetMapping("/contacts")
     List<Contact> all(){
-//        FakeData fakeData = new FakeData();
-//        return fakeData.createFakeContacts();
+
         return repository.findAll();
     }
-
-
 
     @PostMapping("/contacts")
     Contact newContract(@RequestBody Contact newContact) {
@@ -44,8 +41,6 @@ public class ContactsController {
 
         return repository.findById(id)
                 .map(contract -> {
-//                    contract.setName(newContract.getName());
-//                    contract.setRole(newContract.getRole());
                     return repository.save(contract);
                 })
                 .orElseGet(() -> {

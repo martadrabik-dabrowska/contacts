@@ -1,0 +1,34 @@
+<div class="panel-body">
+  <h4>Lista pracowników</h4>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Stanowisko</th>
+      <th>Telefon</th>
+      <th>Status</th>
+      <th>Akcje</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let employee of employees | async">
+      <td>{{employee.firstName}}</td>
+      <td>{{employee.lastName}}</td>
+      <td>{{employee.position}}</td>
+      <td>{{employee.phoneNumber}}</td>
+      <td id="hover-contact" >{{getStatus(employee)}}</td>
+      <td>
+        <mat-icon aria-hidden="false" aria-label="Example create-black icon" (click)="editEmployee(employee)" class="hover-icons">create</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example close-black icon" (click)="deleteEmployee(employee.id)" class="hover-icons">close</mat-icon>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+ <button  mat-raised-button class="add new empoyee" (click)="addEmployee()">Dodaj</button>
+</div>
+
+
+

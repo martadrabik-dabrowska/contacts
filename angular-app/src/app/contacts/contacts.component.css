@@ -1,24 +1,22 @@
+.add-contact-button{
+  float: right;
+  margin: 20px;
+}
+
+h2{
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
 
 table tr td  {
-
-
-
   border : 1px solid black;
 
 }
 
 .border-element{
-
   border : 1px solid black;
-
 }
-/*.basic-container {*/
-/*  padding: 100px;*/
-/*}*/
-
-
-
-
 
 #hover-contact{
 cursor: pointer;
@@ -29,3 +27,6 @@ cursor: pointer;
   margin-right: 20%;
 }
 
+.pagination:hover{
+  cursor: pointer;
+}

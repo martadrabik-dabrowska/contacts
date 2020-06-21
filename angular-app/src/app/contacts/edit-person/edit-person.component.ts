@@ -1,6 +1,6 @@
-import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
-import {PersonGeneralInformationsComponent} from '../contact-parts/person-general-informations/person-general-informations.component';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
+import {CompanyGeneralInformationComponent} from '../contact-parts/company-general-informations/company-general-information.component';
+import {PersonGeneralInformationComponent} from '../contact-parts/person-general-informations/person-general-information.component';
 
 import {AddressComponent} from '../contact-parts/address/address.component';
 import {Contact, ContactService} from '../services/contact.service';
@@ -8,23 +8,26 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormControl, Validators} from '@angular/forms';
 import {Way} from '../add-contact/add-contact.component';
 import {WayOfObtainingComponent} from '../contact-parts/way-of-obtaining/way-of-obtaining.component';
+import {BaseInformationComponent} from '../contact-parts/base-information/base-information.component';
 
 @Component({
   selector: 'app-edit-person',
   templateUrl: './edit-person.component.html',
   styleUrls: ['./edit-person.component.css']
 })
-export class EditPersonComponent implements OnInit {
+export class EditPersonComponent implements OnInit, AfterViewInit {
 
   // @ts-ignore
-  @ViewChild('person', {read: PersonGeneralInformationsComponent, static: false})
-  person: PersonGeneralInformationsComponent;
+  @ViewChild('person', {read: PersonGeneralInformationComponent, static: false})
+  person: PersonGeneralInformationComponent;
   // @ts-ignore
   @ViewChild('wayOfObtainingComponent', {read: WayOfObtainingComponent, static: false})
   wayOfObtainingComponent: WayOfObtainingComponent;
   // @ts-ignore
   @ViewChild('address', {read: AddressComponent, static: false})
   addressComponent: AddressComponent;
+  @ViewChild('baseInformation', {read: BaseInformationComponent, static: false})
+  baseComponent: BaseInformationComponent;
 
   // tslint:disable-next-line:max-line-length
   constructor(private contactService: ContactService, private router: Router, private route: ActivatedRoute, private ref: ChangeDetectorRef){
@@ -50,7 +53,6 @@ export class EditPersonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:use-lifecycle-interface
   ngAfterViewInit() {
     let id = null;
     this.route.queryParams.subscribe(params => id = params.id);
@@ -66,6 +68,7 @@ export class EditPersonComponent implements OnInit {
   }
 
   updateToOtherModule(contact: Contact) {
+    this.baseComponent.contact = contact;
     this.ref.detectChanges();
     this.person.person = contact.person;
     this.wayOfObtainingComponent.wayOfObtaining = contact.wayOfObtaining;
@@ -91,7 +94,7 @@ export class EditPersonComponent implements OnInit {
   }
 
   save() {
-    //  this.contact.addresses.push( this.address.address);
+    this.contact = this.baseComponent.contact;
     this.contact.person = this.person.person;
 
     this.contact.wayOfObtaining = this.wayOfObtainingComponent.wayOfObtaining;

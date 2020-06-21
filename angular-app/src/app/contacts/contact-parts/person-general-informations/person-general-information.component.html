@@ -1,0 +1,26 @@
+<hr>
+<div [hidden]="submitted" class="person-form" style="width: 400px;" [formGroup]="personForm">
+
+    <div class="form-group">
+      <label for="firstName">Imię</label>
+      <input type="text" class="form-control" id="firstName"  [(ngModel)]="person.firstName" name="firstName" formControlName="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Nazwisko</label>
+      <input type="text" class="form-control" id="surname"  [(ngModel)]="person.lastName" name="surname" formControlName="surname">
+    </div>
+
+    <div *ngIf="!personForm.get('surname').valid && personForm.get('surname').touched" style="color:red">
+     Nazwisko jest wymagane
+    </div>
+
+    <div class="form-group">
+      <label for="pesel">PESEL</label>
+      <input type="number" size="11" class="form-control" id="pesel" [(ngModel)]="person.pesel" name="pesel" formControlName="pesel">
+    </div>
+
+    <div *ngIf="!personForm.get('pesel').valid && personForm.get('pesel').touched" style="color:red">
+      PESEL się składać wyłącznie z 11 cyfr
+    </div>
+</div>

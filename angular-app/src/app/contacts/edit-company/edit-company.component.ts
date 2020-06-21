@@ -1,6 +1,6 @@
-import {ChangeDetectorRef, Component, OnInit, ViewChild} from '@angular/core';
-import {CompanyGeneralInformationsComponent} from '../contact-parts/company-general-informations/company-general-informations.component';
-import {PersonGeneralInformationsComponent} from '../contact-parts/person-general-informations/person-general-informations.component';
+import {AfterViewInit, ChangeDetectorRef, Component, ViewChild, OnInit} from '@angular/core';
+import {CompanyGeneralInformationComponent} from '../contact-parts/company-general-informations/company-general-information.component';
+import {PersonGeneralInformationComponent} from '../contact-parts/person-general-informations/person-general-information.component';
 
 import {AddressComponent} from '../contact-parts/address/address.component';
 import {Contact, ContactService} from '../services/contact.service';
@@ -8,25 +8,28 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {FormControl, Validators} from '@angular/forms';
 import {Way} from '../add-contact/add-contact.component';
 import {WayOfObtainingComponent} from '../contact-parts/way-of-obtaining/way-of-obtaining.component';
+import {BaseInformationComponent} from '../contact-parts/base-information/base-information.component';
 
 @Component({
   selector: 'app-edit-company',
   templateUrl: './edit-company.component.html',
   styleUrls: ['./edit-company.component.css']
 })
-export class EditCompanyComponent implements OnInit {
+export class EditCompanyComponent implements OnInit, AfterViewInit {
 
 
 
   // @ts-ignore
-  @ViewChild('companya', {read: CompanyGeneralInformationsComponent, static: false})
-  companyComponent: CompanyGeneralInformationsComponent;
+  @ViewChild('companya', {read: CompanyGeneralInformationComponent, static: false})
+  companyComponent: CompanyGeneralInformationComponent;
   // @ts-ignore
   @ViewChild('wayOfObtaining', {read: WayOfObtainingComponent, static: false})
   wayOfObtainingComponent: WayOfObtainingComponent;
   // @ts-ignore
   @ViewChild('address', {read: AddressComponent, static: false})
   addressComponent: AddressComponent;
+  @ViewChild('baseInformation', {read: BaseInformationComponent, static: false})
+  baseComponent: BaseInformationComponent;
 
 
 
@@ -54,7 +57,6 @@ export class EditCompanyComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:use-lifecycle-interface
   ngAfterViewInit() {
     let id = null;
     this.route.queryParams.subscribe(params => id = params.id);
@@ -70,6 +72,7 @@ export class EditCompanyComponent implements OnInit {
   }
   updateToOtherModule(contact: Contact) {
     this.ref.detectChanges();
+    this.baseComponent.contact = contact;
     this.companyComponent.companyy = contact.company;
     this.wayOfObtainingComponent.wayOfObtaining = contact.wayOfObtaining
     this.wayOfObtainingComponent.recommending = contact.recommending;
@@ -94,6 +97,7 @@ export class EditCompanyComponent implements OnInit {
   //   // }
 
   save() {
+    this.contact = this.baseComponent.contact;
     this.contact.company = this.companyComponent.companyy;
     this.contact.wayOfObtaining = this.wayOfObtainingComponent.wayOfObtaining;
     this.contact.recommending = this.wayOfObtainingComponent.recommending;

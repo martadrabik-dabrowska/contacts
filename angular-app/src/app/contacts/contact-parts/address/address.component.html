@@ -1,44 +1,51 @@
-<hr>
-<h4>Adres:</h4>
-<br>
-<div class="mat-form-field">
-  <li *ngFor="let address of addresses" style="list-style-type: none">
-      <div class="form-group">
-        <label for="name">Nazwa typu adresu</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="address.name" name="name">
-      </div>
-<div >
-      <div class="form-group" style="float: left; margin-right: 10px">
-        <label for="street" >Ulica</label>
-        <input type="text" class="form-control" id="street" required [(ngModel)]="address.street" name="street">
-      </div>
 
-      <div class="form-group" style="float: left; margin-right: 10px">
-        <label for="houseNumber">Nr domu</label>
-        <input type="text" class="form-control" id="houseNumber" required [(ngModel)]="address.houseNumber" name="houseNumber">
-      </div>
-
-      <div class="form-group" style="float: right">
-        <label for="flatNumber">Nr mieszkania</label>
-        <input type="text" class="form-control" id="flatNumber" [(ngModel)]="address.flatNumber" name="apartmentNumber">
-
-      </div>
-</div>
-   <div class="mat-form-field">
-      <div id="address">
-        <div class="form-group" style="float: left; margin-right: 10px; width: 30%">
-          <label for="zipCode">Kod pocztowy</label>
-          <input type="number" class="form-control" id="zipCode" required [(ngModel)]="address.zipCode" name="zipCode" >
+<div class="person-form" style="width: 400px;" [formGroup]="addressForm">
+  <hr>
+  <h4>Adres:</h4>
+  <br>
+  <div class="mat-form-field">
+    <li *ngFor="let address of addresses" style="list-style-type: none">
+        <div class="form-group">
+          <label for="name">Nazwa typu adresu</label>
+          <input type="text" class="form-control" id="name"  [(ngModel)]="address.name" name="name" formControlName="nameAddress">
+        </div>
+  <div >
+        <div class="form-group" style="float: left; margin-right: 10px">
+          <label for="street" >Ulica</label>
+          <input type="text" class="form-control" id="street" [(ngModel)]="address.street" name="street" formControlName="street">
         </div>
 
-        <div class="form-group" style="float: right; width: 50%">
-          <label for="city">Miasto</label>
-          <input type="text" class="form-control" id="city" required [(ngModel)]="address.city" name="city"/>
+        <div class="form-group" style="float: left; margin-right: 10px">
+          <label for="houseNumber">Nr domu</label>
+          <input type="text" class="form-control" id="houseNumber"  [(ngModel)]="address.houseNumber" name="houseNumber" formControlName="houseNumber">
         </div>
-      </div>
-</div>
 
-      <button type="button" class="btn btn-outline-danger" (click)="deleteAddress(address)" style="float: right">Usuń</button>
-  </li>
-  <button type="button" class="btn btn-outline-info" (click)="newAddress()" style="float: right; margin-right: 10px" >Dodaj kolejny adres</button>
+        <div class="form-group" style="float: right">
+          <label for="flatNumber">Nr mieszkania</label>
+          <input type="text" class="form-control" id="flatNumber" [(ngModel)]="address.flatNumber" name="apartmentNumber" formControlName="apartmentNumber">
+
+        </div>
+  </div>
+     <div class="mat-form-field">
+        <div id="address">
+          <div class="form-group" style="float: left; margin-right: 10px; width: 30%">
+            <label for="zipCode">Kod pocztowy</label>
+            <input type="text" class="form-control" id="zipCode" [(ngModel)]="address.zipCode" name="zipCode" formControlName="zipCode">
+            <div *ngIf="!addressForm.get('zipCode').valid && addressForm.get('zipCode').touched" style="color:red">
+              Podaj poprawny kod pocztowy w formie XX-XXX
+            </div>
+          </div>
+
+
+          <div class="form-group" style="float: right; width: 50%">
+            <label for="city">Miasto</label>
+            <input type="text" class="form-control" id="city"  [(ngModel)]="address.city" name="city" formControlName="city"/>
+          </div>
+        </div>
+  </div>
+
+        <button type="button" class="btn btn-outline-danger" [disabled]="!canDeleteAddress()" (click)="deleteAddress(address)" style="float: right">Usuń</button>
+    </li>
+    <button type="button" class="btn btn-outline-info" (click)="newAddress()" style="float: right; margin-right: 10px" >Dodaj kolejny adres</button>
+  </div>
 </div>

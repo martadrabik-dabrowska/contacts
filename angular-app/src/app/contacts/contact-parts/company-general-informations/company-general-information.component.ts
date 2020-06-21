@@ -1,26 +1,26 @@
-import {Component, Injectable, Input, OnInit} from '@angular/core';
+import {Component, Injectable, Input, OnInit, Output} from '@angular/core';
 import {Company} from '../../services/contact.service';
 import {CompanyService} from '../../services/company.service';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-company-general-informations',
-  templateUrl: './company-general-informations.component.html',
-  styleUrls: ['./company-general-informations.component.css']
+  templateUrl: './company-general-information.component.html',
+  styleUrls: ['./company-general-information.component.css']
 })
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class CompanyGeneralInformationsComponent {
+export class CompanyGeneralInformationComponent {
+  @Input()
+  public companyForm: FormGroup;
+
   constructor(private companyService: CompanyService, private router: Router) { }
   @Input()
   public companyy: Company = new Company();
   submitted = false;
-
-  email = new FormControl('', [Validators.required, Validators.email]);
-
   forms: Form[] = [
     {value: 'STOCK_COMPANY', viewValue: 'Spółka akcyja'},
     {value: 'PARTNERSHIP_COMPANY', viewValue: 'Spółka cywilna'},
@@ -28,21 +28,36 @@ export class CompanyGeneralInformationsComponent {
     {value: 'LIMITED_COMPANY', viewValue: 'Spółka zoo'},
     {value: 'OTHER', viewValue: 'Inne'}
   ];
-  save() {
-    this.companyService.addCompany(this.companyy)
-      .subscribe(data => console.log(data), error => console.log(error));
-    this.companyy = new Company();
-    this.gotoList();
-  }
 
   onSubmit() {
     this.submitted = true;
-    this.save();
   }
 
   gotoList() {
     this.router.navigate(['/kontakt']);
   }
+
+
+
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnInit(): void {
+    this.initializeForm();
+  }
+
+
+
+  private initializeForm() {
+
+    // @ts-ignore
+    this.companyForm = new FormGroup({
+      name : new FormControl(null, Validators.required),
+      nip :  new FormControl(null, [Validators.pattern('[0-9]{10}'), Validators.required]),
+      regon :  new FormControl(null),
+      krs :  new FormControl(null),
+      legalForm :  new FormControl(null)
+    });
+  }
+
 }
 
 export interface Form {

@@ -3,7 +3,7 @@ import {Address, Company, Contact, ContactService} from '../../../contacts/servi
 import {ActivatedRoute, Router} from '@angular/router';
 import {AddressService} from '../../../contacts/services/address.service';
 import {Way} from '../../../contacts/add-contact/add-contact.component';
-import {Form} from '../../../contacts/contact-parts/company-general-informations/company-general-informations.component';
+import {Form} from '../../../contacts/contact-parts/company-general-informations/company-general-information.component';
 
 @Component({
   selector: 'app-summary',

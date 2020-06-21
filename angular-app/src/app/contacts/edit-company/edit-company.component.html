@@ -3,24 +3,9 @@
 
   <div class="container">
     <app-company-general-informations #companya></app-company-general-informations>
+    <app-base-information #baseInformation></app-base-information>
 
-    <div class="form-group">
-      <label for="phoneNumber">Telefon</label>
-      <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="contact.phoneNumber" name="phoneNumber" >
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="text" class="form-control" [formControl]="email" [(ngModel)]="contact.email" id="email">
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </div>
-
-    <div class="form-group">
-      <mat-label>Informacje dodatkowe</mat-label>
-      <textarea class="form-control" name="additionalInfo" [(ngModel)]="contact.additionalInfo"></textarea>
-    </div>
-
-    <app-address #address [formControl]="submitted"></app-address>
+    <app-address #address></app-address>
     <app-way-of-obtaining #wayOfObtaining></app-way-of-obtaining>
     <router-outlet></router-outlet>
   </div>

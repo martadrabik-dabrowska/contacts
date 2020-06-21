@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactsComponent } from './contacts/contacts.component';
 // import {AddContactComponent} from "./add-contact/add-contact.component";
-// import {Router, RouterModule, Routes} from "@angular/router";
+// import {Router, RouterModule, Routes} from "@angular/FormsModule
 // @ts-ignore
 import {MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule} from '@angular/material/radio';
 import {HttpClientModule} from '@angular/common/http';
@@ -24,8 +24,8 @@ import {
 // @ts-ignore
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import { AddressComponent } from './contacts/contact-parts/address/address.component';
-import { CompanyGeneralInformationsComponent } from './contacts/contact-parts/company-general-informations/company-general-informations.component';
-import { PersonGeneralInformationsComponent } from './contacts/contact-parts/person-general-informations/person-general-informations.component';
+import { CompanyGeneralInformationComponent } from './contacts/contact-parts/company-general-informations/company-general-information.component';
+import { PersonGeneralInformationComponent } from './contacts/contact-parts/person-general-informations/person-general-information.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AddContactComponent} from './contacts/add-contact/add-contact.component';
@@ -43,6 +43,7 @@ import { EmployeesListComponent } from './details/details-company/employees/empl
 import { SummaryComponent } from './details/details-company/summary/summary.component';
 import { EditEmployeeComponent } from './details/details-company/employees/edit-employee/edit-employee.component';
 import {WayOfObtainingComponent} from './contacts/contact-parts/way-of-obtaining/way-of-obtaining.component';
+import { BaseInformationComponent } from './contacts/contact-parts/base-information/base-information.component';
 
 
 
@@ -67,8 +68,8 @@ import {WayOfObtainingComponent} from './contacts/contact-parts/way-of-obtaining
     ContactsComponent,
     AddContactComponent,
     AddressComponent,
-    CompanyGeneralInformationsComponent,
-    PersonGeneralInformationsComponent,
+    CompanyGeneralInformationComponent,
+    PersonGeneralInformationComponent,
     WayOfObtainingComponent,
     EditCompanyComponent,
     EditPersonComponent,
@@ -78,7 +79,8 @@ import {WayOfObtainingComponent} from './contacts/contact-parts/way-of-obtaining
     EmployeesListComponent,
     SummaryComponent,
     EditEmployeeComponent,
-    JwPaginationComponent
+    JwPaginationComponent,
+    BaseInformationComponent
   ],
   imports: [
     BrowserModule,

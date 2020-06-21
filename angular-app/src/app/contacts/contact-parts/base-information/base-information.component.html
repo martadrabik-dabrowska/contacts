@@ -1,0 +1,22 @@
+
+<div  [formGroup]="baseForm">
+
+  <div class="form-group">
+    <label for="phoneNumber">Telefon</label>
+    <input type="tel" class="form-control" id="phoneNumber" [(ngModel)]="contact.phoneNumber" name="phoneNumber" formControlName="phoneNumber">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" [(ngModel)]="contact.email" id="email" name="email" formControlName="email">
+  </div>
+  <div *ngIf="!baseForm.get('email').valid && baseForm.get('email').touched" style="color:red">
+    Podaj poprawny email
+  </div>
+
+  <div class="form-group">
+    <label for="additionalInformation">Informacje dodatkowe</label>
+    <textarea type="text" [(ngModel)]="contact.additionalInfo" class="form-control" id="additionalInformation"
+              name="additionalInformation" formControlName="additionalInformation"></textarea>
+  </div>
+</div>

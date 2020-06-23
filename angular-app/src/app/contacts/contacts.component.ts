@@ -14,11 +14,11 @@ export class ContactsComponent implements OnInit {
 
   constructor(private contactRestApi: ContactService, private router: Router) {}
   contacts: Observable<Contact[]>;
-  // public displayedColumns = ['name', 'type', 'email', 'phone' , 'edit', 'delete'];
-  // private contact: Contact;
 
   items = [];
+  filteredItems = [];
   pageOfItems: Array<Contact>;
+  filterValue: string;
 
 onChangePage(pageOfItems: Array<Contact>) {
     this.pageOfItems = pageOfItems;
@@ -75,6 +75,17 @@ deleteContact(id: number) {
         error => console.log(error));
   }
 reloadData() {
-    this.contactRestApi.getContactsList().subscribe(con => this.items = con);
+    this.contactRestApi.getContactsList().subscribe(con => {this.items = con;
+    this.filteredItems = con; });
+  }
+
+  filter() {
+    this.filteredItems = (this.filterValue !== undefined || this.filterValue !== '') ? this.doFilter(this.filterValue) : this.filteredItems;
+  }
+
+  doFilter(filterBy: string): Contact[] {
+    filterBy = filterBy.toLowerCase();
+    return this.items.filter((contact: Contact) =>
+      contact.email.toLowerCase().indexOf(filterBy) > -1);
   }
 }

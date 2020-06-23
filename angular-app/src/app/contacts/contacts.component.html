@@ -2,6 +2,8 @@
 
 <div><button mat-button-toggle-group class="add-contact-button" routerLink="/dodaj_kontakt">Dodaj</button></div>
 <br>
+<input type="text" [(ngModel)]="filterValue"/>
+<button type="button" name="Filter" (click)="filter()">Filtruj</button>
 <div class="panel-body">
   <table class="table table-striped" >
     <thead>
@@ -33,6 +35,6 @@
     </tbody>
   </table>
   <div class="pagination">
-    <jw-pagination [items]="items" (changePage)="onChangePage($event)" [pageSize]="3"></jw-pagination>
+    <jw-pagination [items]="filteredItems" (changePage)="onChangePage($event)" [pageSize]="3"></jw-pagination>
   </div>
 </div>

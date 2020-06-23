@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d66f75e-4425-40ab-ab63-5b7d3042d5e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/base-information/base-information.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/base-information/base-information.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/base-information/base-information.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-information.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/add-contact/add-contact.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/address/address.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-information.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-information.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-information.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/company-general-informations/company-general-information.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/base-information/base-information.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-information.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-information.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-informations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contact-parts/person-general-informations/person-general-information.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-company/edit-company.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/edit-person/edit-person.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/details/details-company/summary/summary.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contacts/contacts.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +118,7 @@
       <workItem from="1592556732764" duration="4184000" />
       <workItem from="1592561069527" duration="1050000" />
       <workItem from="1592562135057" duration="248000" />
-      <workItem from="1592562392317" duration="21592000" />
+      <workItem from="1592562392317" duration="26183000" />
     </task>
     <servers />
   </component>
@@ -273,7 +254,22 @@
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/contacts/contacts.component.ts</url>
+          <line>82</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/contacts/contacts.component.ts</url>
+          <line>86</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JavascriptDebugType">

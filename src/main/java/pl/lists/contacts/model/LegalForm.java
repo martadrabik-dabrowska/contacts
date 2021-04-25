@@ -2,7 +2,7 @@ package pl.lists.contacts.model;
 
 public enum LegalForm {
 
-    STOCK_COMPANY(1,"Spółka akcyja"),
+    STOCK_COMPANY(1,"Spółka akcyjna"),
 
     PARTNERSHIP_COMPANY(2, "Spółka cywilna"),
 

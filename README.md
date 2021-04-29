@@ -6,7 +6,7 @@ Simple app to storage and presentation of contractor data.
 * [Status](#status)
 
 
-## Click and check on YouTube 🠓
+## Click on the picture and check on YouTube 🠓
 
 <div align="center">
       <a href="https://youtu.be/ZjOk5RPVf_M">
